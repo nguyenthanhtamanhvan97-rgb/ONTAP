@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English 7 - Unit 4: Music and Arts | THCS Thái Bình</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --font-heading: 'Baloo 2', cursive, sans-serif;
+            --font-body: 'Nunito', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #fae8ff 100%);
+            min-height: 100vh;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: var(--font-heading);
+        }
+
+        /* 1.5x Scaled Typography for Classroom & Mobile Legibility */
+        .scaled-content {
+            font-size: 1.35rem;
+            line-height: 1.75;
+        }
+        @media (min-width: 768px) {
+            .scaled-content {
+                font-size: 1.5rem;
+                line-height: 1.8;
+            }
+        }
+
+        /* Gamification Option Buttons: A, B, C, D Distinct Themes */
+        .opt-btn {
+            transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .opt-btn:hover:not(:disabled) {
+            transform: translateY(-4px) scale(1.01);
+        }
+        .opt-btn:active:not(:disabled) {
+            transform: translateY(1px) scale(0.99);
+        }
+
+        /* Option A: Xanh dương Lam (Sapphire Blue) */
+        .opt-a {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 3px solid #3b82f6;
+            color: #1e3a8a;
+            box-shadow: 0 6px 0 #2563eb, 0 10px 15px -3px rgba(59, 130, 246, 0.2);
+        }
+        .opt-a:hover:not(:disabled) {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            box-shadow: 0 8px 0 #1d4ed8, 0 14px 20px -3px rgba(59, 130, 246, 0.3);
+        }
+        .badge-a {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: #ffffff;
+            box-shadow: 0 3px 6px rgba(29, 78, 216, 0.4);
+        }
+
+        /* Option B: Hổ phách Cam (Amber Orange) */
+        .opt-b {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border: 3px solid #f59e0b;
+            color: #78350f;
+            box-shadow: 0 6px 0 #d97706, 0 10px 15px -3px rgba(245, 158, 11, 0.2);
+        }
+        .opt-b:hover:not(:disabled) {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            box-shadow: 0 8px 0 #b45309, 0 14px 20px -3px rgba(245, 158, 11, 0.3);
+        }
+        .badge-b {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: #ffffff;
+            box-shadow: 0 3px 6px rgba(180, 83, 9, 0.4);
+        }
+
+        /* Option C: Ngọc lục bảo (Emerald Green) */
+        .opt-c {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border: 3px solid #10b981;
+            color: #064e3b;
+            box-shadow: 0 6px 0 #059669, 0 10px 15px -3px rgba(16, 185, 129, 0.2);
+        }
+        .opt-c:hover:not(:disabled) {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            box-shadow: 0 8px 0 #047857, 0 14px 20px -3px rgba(16, 185, 129, 0.3);
+        }
+        .badge-c {
+            background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+            color: #ffffff;
+            box-shadow: 0 3px 6px rgba(4, 120, 87, 0.4);
+        }
+
+        /* Option D: Tím thạch anh (Amethyst Purple) */
+        .opt-d {
+            background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+            border: 3px solid #a855f7;
+            color: #4c1d95;
+            box-shadow: 0 6px 0 #9333ea, 0 10px 15px -3px rgba(168, 85, 247, 0.2);
+        }
+        .opt-d:hover:not(:disabled) {
+            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+            box-shadow: 0 8px 0 #7e22ce, 0 14px 20px -3px rgba(168, 85, 247, 0.3);
+        }
+        .badge-d {
+            background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
+            color: #ffffff;
+            box-shadow: 0 3px 6px rgba(126, 34, 206, 0.4);
+        }
+
+        /* Instant Feedback States: Correct (Green) & Wrong (Red) */
+        .opt-correct {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%) !important;
+            border-color: #15803d !important;
+            color: #ffffff !important;
+            box-shadow: 0 6px 0 #14532d, 0 0 25px rgba(34, 197, 94, 0.6) !important;
+            transform: scale(1.02) !important;
+        }
+        .opt-correct .opt-badge {
+            background: #ffffff !important;
+            color: #15803d !important;
+        }
+
+        .opt-wrong {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+            border-color: #b91c1c !important;
+            color: #ffffff !important;
+            box-shadow: 0 6px 0 #7f1d1d, 0 0 20px rgba(239, 68, 68, 0.5) !important;
+            animation: shakeError 0.45s cubic-bezier(.36,.07,.19,.97) both;
+            opacity: 0.9;
+        }
+        .opt-wrong .opt-badge {
+            background: #ffffff !important;
+            color: #b91c1c !important;
+        }
+
+        @keyframes shakeError {
+            10%, 90% { transform: translate3d(-3px, 0, 0); }
+            20%, 80% { transform: translate3d(5px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-7px, 0, 0); }
+            40%, 60% { transform: translate3d(7px, 0, 0); }
+        }
+
+        @keyframes popSuccess {
+            0% { transform: scale(0.95); }
+            50% { transform: scale(1.04); }
+            100% { transform: scale(1.02); }
+        }
+        .animate-pop {
+            animation: popSuccess 0.35s ease-out forwards;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 8px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+
+        /* 3D Gamified Card Push */
+        .game-card-push {
+            transition: all 0.25s ease;
+            box-shadow: 0 8px 0 rgba(0,0,0,0.12), 0 15px 25px rgba(0,0,0,0.08);
+        }
+        .game-card-push:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 13px 0 rgba(0,0,0,0.12), 0 20px 30px rgba(0,0,0,0.12);
+        }
+        .game-card-push:active {
+            transform: translateY(2px);
+            box-shadow: 0 4px 0 rgba(0,0,0,0.12);
+        }
+    </style>
+</head>
+<body class="selection:bg-indigo-200 selection:text-indigo-900">
+
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b-4 border-indigo-200 shadow-md px-3 py-2.5 md:px-6">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <!-- Left: School & Teacher Info + Menu Button -->
+            <div class="flex items-center gap-2 md:gap-4">
+                <button onclick="switchScreen('start')" class="flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white font-bold px-4 py-2 rounded-2xl shadow-md hover:shadow-lg active:scale-95 transition-all text-base md:text-lg" title="Về màn hình bắt đầu">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <span>Menu</span>
+                </button>
+
+                <div class="hidden sm:flex items-center gap-2 bg-indigo-50 border-2 border-indigo-200 px-3.5 py-1.5 rounded-2xl">
+                    <i class="fa-solid fa-school text-indigo-600 text-lg"></i>
+                    <div class="text-sm md:text-base leading-tight">
+                        <span class="font-extrabold text-indigo-950">THCS Thái Bình</span>
+                        <span class="mx-1.5 text-indigo-300">|</span>
+                        <span class="font-bold text-indigo-700">GV: Nguyễn Thanh Tâm</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center: Quick Tab Switcher (Visible when inside tabs) -->
+            <div id="topTabSwitcher" class="hidden lg:flex items-center gap-2 bg-slate-100 p-1.5 rounded-2xl border border-slate-200">
+                <button onclick="switchScreen('tab1')" id="navBtnTab1" class="px-3.5 py-1.5 rounded-xl font-bold text-base transition-all flex items-center gap-1.5">
+                    <i class="fa-solid fa-book-open"></i> Thẻ 1: Từ vựng
+                </button>
+                <button onclick="switchScreen('tab2')" id="navBtnTab2" class="px-3.5 py-1.5 rounded-xl font-bold text-base transition-all flex items-center gap-1.5">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Thẻ 2: Ngữ pháp
+                </button>
+                <button onclick="switchScreen('tab3')" id="navBtnTab3" class="px-3.5 py-1.5 rounded-xl font-bold text-base transition-all flex items-center gap-1.5">
+                    <i class="fa-solid fa-gamepad"></i> Thẻ 3: Bài tập (60 câu)
+                </button>
+            </div>
+
+            <!-- Right: Score Pill, Sound Toggle & Fullscreen Button -->
+            <div class="flex items-center gap-2">
+                <div class="flex items-center gap-2 bg-amber-100 border-2 border-amber-400 text-amber-900 px-3.5 py-1.5 rounded-2xl font-extrabold text-base md:text-lg shadow-sm">
+                    <i class="fa-solid fa-star text-amber-500 animate-pulse"></i>
+                    <span id="headerTotalScore">0</span>
+                    <span class="text-xs md:text-sm font-bold text-amber-700">điểm</span>
+                </div>
+
+                <button onclick="toggleSound()" id="soundToggleBtn" class="w-11 h-11 rounded-2xl bg-emerald-100 hover:bg-emerald-200 border-2 border-emerald-400 text-emerald-700 flex items-center justify-center text-lg transition-all shadow-sm" title="Bật/Tắt âm thanh">
+                    <i id="soundIcon" class="fa-solid fa-volume-high"></i>
+                </button>
+
+                <button onclick="toggleFullscreen()" id="fullscreenBtn" class="flex items-center gap-1.5 px-3.5 py-2 rounded-2xl bg-sky-100 hover:bg-sky-200 border-2 border-sky-400 text-sky-800 font-bold text-base transition-all shadow-sm" title="Toàn màn hình">
+                    <i id="fullscreenIcon" class="fa-solid fa-expand"></i>
+                    <span class="hidden md:inline">Toàn màn hình</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-3 py-6 md:px-6 md:py-8">
+
+        <!-- ==========================================
+             START SCREEN (MÀN HÌNH BẮT ĐẦU)
+             ========================================== -->
+        <section id="screen-start" class="space-y-8 animate-fadeIn">
+            <!-- Hero Banner with School & Teacher Info -->
+            <div class="relative rounded-3xl bg-gradient-to-br from-indigo-600 via-purple-600 to-fuchsia-600 text-white p-6 md:p-10 shadow-2xl border-4 border-white overflow-hidden">
+                <!-- Decorative Musical & Artistic Background Icons -->
+                <i class="fa-solid fa-music absolute -top-6 -left-6 text-9xl text-white/10 rotate-12 pointer-events-none"></i>
+                <i class="fa-solid fa-palette absolute -bottom-8 -right-6 text-9xl text-white/10 -rotate-12 pointer-events-none"></i>
+                <i class="fa-solid fa-guitar absolute top-1/2 right-1/4 text-8xl text-white/5 rotate-45 pointer-events-none"></i>
+
+                <div class="relative z-10 text-center max-w-4xl mx-auto space-y-5">
+                    <!-- School & Teacher Badge -->
+                    <div class="inline-flex flex-wrap items-center justify-center gap-3 bg-white/95 text-indigo-950 px-6 py-2.5 rounded-full shadow-lg border-2 border-amber-300">
+                        <span class="flex items-center gap-2 font-extrabold text-lg md:text-xl text-indigo-800">
+                            <i class="fa-solid fa-graduation-cap text-amber-500 text-2xl"></i>
+                            TRƯỜNG THCS THÁI BÌNH
+                        </span>
+                        <span class="text-indigo-300 font-black">•</span>
+                        <span class="flex items-center gap-2 font-extrabold text-lg md:text-xl text-fuchsia-700">
+                            <i class="fa-solid fa-chalkboard-user text-fuchsia-500 text-xl"></i>
+                            GV: Nguyễn Thanh Tâm
+                        </span>
+                    </div>
+
+                    <div class="space-y-2">
+                        <p class="uppercase tracking-widest font-extrabold text-amber-300 text-lg md:text-xl drop-shadow">
+                            Chương Trình GDPT 2018 • Global Success 7
+                        </p>
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight drop-shadow-md leading-tight">
+                            UNIT 4: MUSIC AND ARTS
+                        </h1>
+                        <p class="text-xl md:text-2xl text-indigo-100 font-semibold max-w-2xl mx-auto pt-1">
+                            Hệ thống học tập & luyện tập Từ vựng – Ngữ pháp tương tác thông minh
+                        </p>
+                    </div>
+
+                    <!-- Quick Stats Row -->
+                    <div class="grid grid-cols-3 gap-3 max-w-2xl mx-auto pt-3">
+                        <div class="bg-white/15 backdrop-blur-sm rounded-2xl p-3 border border-white/25">
+                            <div class="text-2xl md:text-3xl font-extrabold text-amber-300">32+</div>
+                            <div class="text-sm md:text-base font-bold text-white">Từ vựng & Âm thanh</div>
+                        </div>
+                        <div class="bg-white/15 backdrop-blur-sm rounded-2xl p-3 border border-white/25">
+                            <div class="text-2xl md:text-3xl font-extrabold text-emerald-300">5 Chủ điểm</div>
+                            <div class="text-sm md:text-base font-bold text-white">Ngữ pháp Cốt lõi</div>
+                        </div>
+                        <div class="bg-white/15 backdrop-blur-sm rounded-2xl p-3 border border-white/25">
+                            <div class="text-2xl md:text-3xl font-extrabold text-pink-300">60 Câu</div>
+                            <div class="text-sm md:text-base font-bold text-white">30 Cơ bản • 30 Nâng cao</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Interactive Selection Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Card 1: Vocabulary -->
+                <div onclick="switchScreen('tab1')" class="cursor-pointer group rounded-3xl bg-white p-7 border-4 border-sky-400 game-card-push flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -right-8 -top-8 w-32 h-32 bg-sky-100 rounded-full group-hover:scale-125 transition-transform"></div>
+                    <div class="relative z-10 space-y-4">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-sky-400 to-blue-600 text-white flex items-center justify-center text-4xl shadow-lg">
+                            <i class="fa-solid fa-headphones-simple"></i>
+                        </div>
+                        <span class="inline-block bg-sky-100 text-sky-800 font-extrabold px-4 py-1 rounded-full text-base border border-sky-300">
+                            THẺ 1 • VOCABULARY
+                        </span>
+                        <h2 class="text-3xl font-extrabold text-slate-800 group-hover:text-sky-600 transition-colors">
+                            Từ Vựng Trọng Tâm
+                        </h2>
+                        <p class="text-slate-600 text-xl leading-relaxed font-medium">
+                            Tổng hợp từ vựng chủ đề Âm nhạc & Nghệ thuật kèm phiên âm IPA, từ loại, nghĩa Tiếng Việt và giọng đọc chuẩn bản xứ.
+                        </p>
+                    </div>
+                    <div class="relative z-10 pt-6 mt-6 border-t-2 border-slate-100 flex items-center justify-between text-sky-600 font-extrabold text-xl">
+                        <span>Khám phá ngay</span>
+                        <span class="w-11 h-11 rounded-full bg-sky-100 flex items-center justify-center group-hover:bg-sky-600 group-hover:text-white transition-all">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Grammar -->
+                <div onclick="switchScreen('tab2')" class="cursor-pointer group rounded-3xl bg-white p-7 border-4 border-amber-400 game-card-push flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -right-8 -top-8 w-32 h-32 bg-amber-100 rounded-full group-hover:scale-125 transition-transform"></div>
+                    <div class="relative z-10 space-y-4">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-white flex items-center justify-center text-4xl shadow-lg">
+                            <i class="fa-solid fa-book-bookmark"></i>
+                        </div>
+                        <span class="inline-block bg-amber-100 text-amber-800 font-extrabold px-4 py-1 rounded-full text-base border border-amber-300">
+                            THẺ 2 • GRAMMAR
+                        </span>
+                        <h2 class="text-3xl font-extrabold text-slate-800 group-hover:text-amber-600 transition-colors">
+                            Ngữ Pháp Cốt Lõi
+                        </h2>
+                        <p class="text-slate-600 text-xl leading-relaxed font-medium">
+                            Chi tiết cấu trúc so sánh <code class="text-amber-700 font-bold">(not) as...as</code>, <code class="text-amber-700 font-bold">the same as</code>, <code class="text-amber-700 font-bold">different from</code>, <code class="text-amber-700 font-bold">like</code> và từ loại.
+                        </p>
+                    </div>
+                    <div class="relative z-10 pt-6 mt-6 border-t-2 border-slate-100 flex items-center justify-between text-amber-600 font-extrabold text-xl">
+                        <span>Xem bài giảng</span>
+                        <span class="w-11 h-11 rounded-full bg-amber-100 flex items-center justify-center group-hover:bg-amber-500 group-hover:text-white transition-all">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Quiz Game -->
+                <div onclick="switchScreen('tab3')" class="cursor-pointer group rounded-3xl bg-white p-7 border-4 border-emerald-400 game-card-push flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -right-8 -top-8 w-32 h-32 bg-emerald-100 rounded-full group-hover:scale-125 transition-transform"></div>
+                    <div class="relative z-10 space-y-4">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 text-white flex items-center justify-center text-4xl shadow-lg">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 font-extrabold px-4 py-1 rounded-full text-base border border-emerald-300">
+                            THẺ 3 • PRACTICE GAME
+                        </span>
+                        <h2 class="text-3xl font-extrabold text-slate-800 group-hover:text-emerald-600 transition-colors">
+                            Bài Tập Trắc Nghiệm
+                        </h2>
+                        <p class="text-slate-600 text-xl leading-relaxed font-medium">
+                            Thử sức với <strong>30 câu Cơ bản</strong> & <strong>30 câu Nâng cao</strong>. Có dịch thông minh, giải thích chi tiết và tính điểm trực tiếp!
+                        </p>
+                    </div>
+                    <div class="relative z-10 pt-6 mt-6 border-t-2 border-slate-100 flex items-center justify-between text-emerald-600 font-extrabold text-xl">
+                        <span>Vào thử thách</span>
+                        <span class="w-11 h-11 rounded-full bg-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-all">
+                            <i class="fa-solid fa-play"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             TAB 1: TỪ VỰNG TRỌNG TÂM (VOCABULARY)
+             ========================================== -->
+        <section id="screen-tab1" class="hidden space-y-6 scaled-content">
+            <!-- Header Banner -->
+            <div class="bg-gradient-to-r from-sky-500 to-indigo-600 rounded-3xl p-6 md:p-8 text-white shadow-xl border-4 border-white flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="space-y-2 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 bg-white/20 px-4 py-1 rounded-full text-base font-bold">
+                        <i class="fa-solid fa-volume-high"></i> Nhấn vào nút Loa trên từng thẻ để nghe phát âm chuẩn
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold">
+                        THẺ 1: TỪ VỰNG UNIT 4 – MUSIC AND ARTS
+                    </h2>
+                    <p class="text-sky-100 text-lg md:text-xl font-medium">
+                        Nắm vững 32 từ và cụm từ cốt lõi xuất hiện trực tiếp trong phần bài tập
+                    </p>
+                </div>
+                <div class="flex flex-wrap items-center gap-3">
+                    <button onclick="switchScreen('tab2')" class="bg-amber-400 hover:bg-amber-300 text-slate-900 font-extrabold px-5 py-3 rounded-2xl shadow-lg transition-all text-lg flex items-center gap-2">
+                        <span>Sang Thẻ 2: Ngữ pháp</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search & Category Filter -->
+            <div class="bg-white rounded-3xl p-4 md:p-6 shadow-md border-2 border-sky-200 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="relative w-full md:w-1/2">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl"></i>
+                    <input type="text" id="vocabSearchInput" oninput="filterVocabulary()" placeholder="Tìm từ tiếng Anh hoặc nghĩa tiếng Việt..." class="w-full pl-12 pr-4 py-3 rounded-2xl border-2 border-slate-200 focus:border-sky-500 focus:outline-none text-lg md:text-xl font-semibold">
+                </div>
+                <div class="flex flex-wrap items-center gap-2 w-full md:w-auto justify-center">
+                    <button onclick="setVocabFilter('all')" id="vFilter-all" class="px-4 py-2 rounded-xl font-bold text-base md:text-lg bg-sky-600 text-white shadow-sm transition-all">Tất cả (32)</button>
+                    <button onclick="setVocabFilter('music')" id="vFilter-music" class="px-4 py-2 rounded-xl font-bold text-base md:text-lg bg-slate-100 text-slate-700 hover:bg-sky-100 transition-all">Âm nhạc</button>
+                    <button onclick="setVocabFilter('art')" id="vFilter-art" class="px-4 py-2 rounded-xl font-bold text-base md:text-lg bg-slate-100 text-slate-700 hover:bg-sky-100 transition-all">Hội họa & Nghệ thuật</button>
+                    <button onclick="setVocabFilter('action')" id="vFilter-action" class="px-4 py-2 rounded-xl font-bold text-base md:text-lg bg-slate-100 text-slate-700 hover:bg-sky-100 transition-all">Động từ & Cụm từ</button>
+                </div>
+            </div>
+
+            <!-- Vocabulary Grid -->
+            <div id="vocabGridContainer" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <!-- Populated dynamically via JS -->
+            </div>
+        </section>
+
+        <!-- ==========================================
+             TAB 2: NGỮ PHÁP CỐT LÕI (GRAMMAR)
+             ========================================== -->
+        <section id="screen-tab2" class="hidden space-y-8 scaled-content">
+            <!-- Header Banner -->
+            <div class="bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 rounded-3xl p-6 md:p-8 text-white shadow-xl border-4 border-white flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="space-y-2 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 bg-white/25 px-4 py-1 rounded-full text-base font-bold">
+                        <i class="fa-solid fa-star"></i> Trọng tâm Ngữ pháp Global Success 7 - Unit 4
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold">
+                        THẺ 2: NGỮ PHÁP CỐT LÕI & CẤU TRÚC MỞ RỘNG
+                    </h2>
+                    <p class="text-amber-100 text-lg md:text-xl font-medium">
+                        Hệ thống hóa các cấu trúc so sánh, giới từ, từ loại và cụm từ cố định
+                    </p>
+                </div>
+                <button onclick="switchScreen('tab3')" class="bg-white hover:bg-emerald-50 text-emerald-700 font-extrabold px-6 py-3.5 rounded-2xl shadow-lg transition-all text-lg flex items-center gap-2 shrink-0">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <span>Làm 60 câu Bài tập</span>
+                </button>
+            </div>
+
+            <!-- Grammar Unit 1: Comparisons with (not) as ... as -->
+            <div class="bg-white rounded-3xl p-6 md:p-8 shadow-lg border-4 border-sky-300 space-y-5">
+                <div class="flex items-center gap-3 border-b-2 border-sky-100 pb-4">
+                    <span class="w-12 h-12 rounded-2xl bg-sky-600 text-white font-extrabold flex items-center justify-center text-2xl shadow">1</span>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-sky-900">
+                        So sánh bằng và không bằng: <span class="text-sky-600">(not) as ... as</span>
+                    </h3>
+                </div>
+
+                <p class="text-slate-700 font-medium">
+                    Dùng để so sánh hai người, hai vật hoặc hai sự việc có tính chất <strong>bằng nhau</strong> hoặc <strong>không bằng nhau</strong>.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div class="bg-sky-50 rounded-2xl p-5 border-2 border-sky-200 space-y-2">
+                        <div class="font-extrabold text-sky-800 text-xl flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-600"></i> Dạng khẳng định (Bằng nhau):
+                        </div>
+                        <div class="bg-white p-3.5 rounded-xl border border-sky-300 font-extrabold text-indigo-900 text-center">
+                            S1 + be / V + <span class="text-rose-600">as + adj / adv + as</span> + S2
+                        </div>
+                        <p class="text-slate-600 text-lg pt-1">
+                            • <em>Folk music is <strong>as melodic as</strong> pop music.</em> (Nhạc dân gian cũng du dương như nhạc pop.)<br>
+                            • <em>She paints <strong>as carefully as</strong> a professional artist.</em> (Cô ấy vẽ cẩn thận như một họa sĩ chuyên nghiệp.)
+                        </p>
+                    </div>
+
+                    <div class="bg-rose-50 rounded-2xl p-5 border-2 border-rose-200 space-y-2">
+                        <div class="font-extrabold text-rose-800 text-xl flex items-center gap-2">
+                            <i class="fa-solid fa-circle-xmark text-rose-600"></i> Dạng phủ định (Không bằng):
+                        </div>
+                        <div class="bg-white p-3.5 rounded-xl border border-rose-300 font-extrabold text-indigo-900 text-center">
+                            S1 + be / aux + not + <span class="text-rose-600">as (so) + adj / adv + as</span> + S2
+                        </div>
+                        <p class="text-slate-600 text-lg pt-1">
+                            • <em>Classical music is <strong>not as exciting as</strong> rock music.</em> (Nhạc cổ điển không sôi động bằng nhạc rock.)<br>
+                            • <strong>Lưu ý:</strong> Trong câu phủ định, có thể thay chữ <strong>as</strong> đầu tiên bằng <strong>so</strong> (<em>not so ... as</em>).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 border-l-8 border-amber-500 p-4 rounded-2xl text-amber-950 font-semibold">
+                    <i class="fa-solid fa-lightbulb text-amber-500 mr-2"></i>
+                    <strong>Mẹo làm bài:</strong> Giữa <code>as ... as</code> bắt buộc là <strong>Tính từ / Trạng từ nguyên mẫu</strong> (tuyệt đối KHÔNG thêm đuôi <em>-er</em> hay từ <em>more</em>). Sau <em>to be / look / sound / feel / seem</em> dùng <strong>Tính từ (adj)</strong>; sau động từ thường (<em>sing, dance, paint, play...</em>) dùng <strong>Trạng từ (adv)</strong>.
+                </div>
+            </div>
+
+            <!-- Grammar Unit 2: like & different from -->
+            <div class="bg-white rounded-3xl p-6 md:p-8 shadow-lg border-4 border-amber-300 space-y-5">
+                <div class="flex items-center gap-3 border-b-2 border-amber-100 pb-4">
+                    <span class="w-12 h-12 rounded-2xl bg-amber-500 text-white font-extrabold flex items-center justify-center text-2xl shadow">2</span>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-amber-900">
+                        So sánh tương đồng & khác biệt: <span class="text-amber-600">like</span> và <span class="text-orange-600">different from</span>
+                    </h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- LIKE -->
+                    <div class="bg-amber-50/70 rounded-2xl p-5 border-2 border-amber-200 space-y-3">
+                        <h4 class="text-2xl font-extrabold text-amber-800 flex items-center gap-2">
+                            <span class="bg-amber-500 text-white px-3 py-0.5 rounded-lg">A</span>
+                            Cấu trúc với "like" (giống như)
+                        </h4>
+                        <div class="bg-white p-3.5 rounded-xl border border-amber-300 font-extrabold text-indigo-900 text-center">
+                            S + be / look / sound / feel + <span class="text-amber-600">like</span> + Noun / Pronoun
+                        </div>
+                        <ul class="space-y-2 text-slate-700 font-medium list-disc list-inside">
+                            <li><strong>like</strong> ở đây là <strong>giới từ</strong> mang nghĩa <em>"giống như, tương tự như"</em>, đứng ngay trước một <strong>Danh từ</strong> hoặc <strong>Đại từ</strong>.</li>
+                            <li>Ví dụ: <em>This portrait looks <strong>like</strong> a real photograph.</em> (Bức chân dung này trông giống như một bức ảnh thật.)</li>
+                            <li>Ví dụ: <em>She sings <strong>like</strong> an angel.</em> (Cô ấy hát hay như một thiên thần.)</li>
+                        </ul>
+                    </div>
+
+                    <!-- DIFFERENT FROM -->
+                    <div class="bg-orange-50/70 rounded-2xl p-5 border-2 border-orange-200 space-y-3">
+                        <h4 class="text-2xl font-extrabold text-orange-800 flex items-center gap-2">
+                            <span class="bg-orange-500 text-white px-3 py-0.5 rounded-lg">B</span>
+                            Cấu trúc với "different from" (khác với)
+                        </h4>
+                        <div class="bg-white p-3.5 rounded-xl border border-orange-300 font-extrabold text-indigo-900 text-center">
+                            S1 + be / look / sound + <span class="text-orange-600">different from</span> + S2
+                        </div>
+                        <ul class="space-y-2 text-slate-700 font-medium list-disc list-inside">
+                            <li>Đi sau tính từ <strong>different</strong> luôn là giới từ <strong>from</strong> (không chọn <em>with</em> hay <em>as</em>).</li>
+                            <li>Có thể thêm trạng từ nhấn mạnh trước <em>different</em>: <strong>completely / totally / quite / very / much + different from</strong>.</li>
+                            <li>Ví dụ: <em>Water puppetry is <strong>different from</strong> traditional theatre.</em></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grammar Unit 3: (not) the same as & Transformation Rules -->
+            <div class="bg-white rounded-3xl p-6 md:p-8 shadow-lg border-4 border-emerald-300 space-y-5">
+                <div class="flex items-center gap-3 border-b-2 border-emerald-100 pb-4">
+                    <span class="w-12 h-12 rounded-2xl bg-emerald-600 text-white font-extrabold flex items-center justify-center text-2xl shadow">3</span>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-emerald-900">
+                        Cấu trúc <span class="text-emerald-600">(not) the same as</span> & Quy tắc biến đổi câu nâng cao
+                    </h3>
+                </div>
+
+                <div class="bg-emerald-50 rounded-2xl p-5 border-2 border-emerald-200 space-y-3">
+                    <div class="bg-white p-4 rounded-xl border border-emerald-300 font-extrabold text-indigo-900 text-center">
+                        S1 + be / V + (not) + <span class="text-emerald-600">the same (+ Noun) + as</span> + S2
+                    </div>
+                    <p class="text-slate-700 font-medium">
+                        • Đi với <strong>the same</strong> luôn là liên từ <strong>as</strong> (không dùng <em>from</em> hay <em>like</em>).<br>
+                        • Giữa <em>the same ... as</em> là một <strong>Danh từ (Noun)</strong>, trong khi giữa <em>as ... as</em> là một <strong>Tính từ/Trạng từ (Adj/Adv)</strong>.
+                    </p>
+                </div>
+
+                <!-- Transformation Table -->
+                <div class="overflow-x-auto rounded-2xl border-2 border-emerald-200">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-emerald-600 text-white font-extrabold">
+                                <th class="p-4 border-r border-emerald-500">Cấu trúc as + Adj + as</th>
+                                <th class="p-4 border-r border-emerald-500">Cấu trúc the same + Noun + as</th>
+                                <th class="p-4">Nghĩa Tiếng Việt</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-emerald-100 font-semibold text-slate-700">
+                            <tr class="bg-white">
+                                <td class="p-3.5 border-r border-emerald-100">as <strong>old</strong> as</td>
+                                <td class="p-3.5 border-r border-emerald-100 text-emerald-800">the same <strong>age</strong> as</td>
+                                <td class="p-3.5">cùng độ tuổi với</td>
+                            </tr>
+                            <tr class="bg-emerald-50/40">
+                                <td class="p-3.5 border-r border-emerald-100">as <strong>expensive / cheap</strong> as</td>
+                                <td class="p-3.5 border-r border-emerald-100 text-emerald-800">the same <strong>price</strong> as</td>
+                                <td class="p-3.5">cùng mức giá với</td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="p-3.5 border-r border-emerald-100">as <strong>long / short</strong> as</td>
+                                <td class="p-3.5 border-r border-emerald-100 text-emerald-800">the same <strong>length</strong> as</td>
+                                <td class="p-3.5">cùng độ dài / thời lượng với</td>
+                            </tr>
+                            <tr class="bg-emerald-50/40">
+                                <td class="p-3.5 border-r border-emerald-100">as <strong>tall / high</strong> as</td>
+                                <td class="p-3.5 border-r border-emerald-100 text-emerald-800">the same <strong>height</strong> as</td>
+                                <td class="p-3.5">cùng chiều cao với</td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="p-3.5 border-r border-emerald-100"><strong>different from</strong></td>
+                                <td class="p-3.5 border-r border-emerald-100 text-rose-700"><strong>not the same as</strong></td>
+                                <td class="p-3.5">khác với = không giống với</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Grammar Unit 4: Preferences, Word Forms & Collocations -->
+            <div class="bg-white rounded-3xl p-6 md:p-8 shadow-lg border-4 border-purple-300 space-y-5">
+                <div class="flex items-center gap-3 border-b-2 border-purple-100 pb-4">
+                    <span class="w-12 h-12 rounded-2xl bg-purple-600 text-white font-extrabold flex items-center justify-center text-2xl shadow">4</span>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-purple-900">
+                        Cấu trúc Sở thích, Gia đình từ (Word Forms) & Cụm từ cố định
+                    </h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-purple-50 rounded-2xl p-5 border-2 border-purple-200 space-y-3">
+                        <h4 class="text-xl font-extrabold text-purple-900">
+                            <i class="fa-solid fa-heart text-rose-500 mr-1.5"></i> Cấu trúc thích cái gì hơn cái gì:
+                        </h4>
+                        <ul class="space-y-2.5 text-slate-700 font-semibold">
+                            <li>• <span class="text-purple-700 font-extrabold">prefer + N / V-ing + to + N / V-ing</span>: thích cái gì/làm gì hơn cái gì/làm gì.<br>
+                                <span class="text-slate-500 text-base">VD: <em>I prefer folk music <strong>to</strong> modern rock.</em></span>
+                            </li>
+                            <li>• <span class="text-purple-700 font-extrabold">would rather + V(nguyên thể) + than + V(nguyên thể)</span>: thích làm gì hơn làm gì.</li>
+                            <li>• <span class="text-purple-700 font-extrabold">play + THE + tên nhạc cụ</span>: <em>play the piano, play the guitar, play the violin, play the cello...</em></li>
+                            <li>• <span class="text-purple-700 font-extrabold">in person</span>: trực tiếp ngoài đời thực (<em>see the band in person</em>).</li>
+                            <li>• <span class="text-purple-700 font-extrabold">originate in</span> (+ địa điểm/thời gian): bắt nguồn ở đâu, khi nào.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-indigo-50 rounded-2xl p-5 border-2 border-indigo-200 space-y-3">
+                        <h4 class="text-xl font-extrabold text-indigo-900">
+                            <i class="fa-solid fa-sitemap text-indigo-600 mr-1.5"></i> Bảng Từ loại (Word Family) Unit 4:
+                        </h4>
+                        <ul class="space-y-2 text-slate-700 font-semibold">
+                            <li>• <strong>music</strong> (n: âm nhạc) $\rightarrow$ <strong>musical</strong> (adj: thuộc âm nhạc) $\rightarrow$ <strong>musician</strong> (n: nhạc sĩ)</li>
+                            <li>• <strong>art</strong> (n: nghệ thuật) $\rightarrow$ <strong>artistic</strong> (adj: có tính nghệ thuật) $\rightarrow$ <strong>artist</strong> (n: họa sĩ/nghệ sĩ)</li>
+                            <li>• <strong>compose</strong> (v: sáng tác) $\rightarrow$ <strong>composer</strong> (n: nhà soạn nhạc)</li>
+                            <li>• <strong>perform</strong> (v: biểu diễn) $\rightarrow$ <strong>performance</strong> (n: buổi/màn biểu diễn) $\rightarrow$ <strong>performer</strong> (n: người biểu diễn)</li>
+                            <li>• <strong>paint</strong> (v: vẽ) $\rightarrow$ <strong>painting</strong> (n: bức tranh) $\rightarrow$ <strong>painter</strong> (n: họa sĩ)</li>
+                            <li>• <strong>photo</strong> (n: bức ảnh) $\rightarrow$ <strong>photography</strong> (n: nhiếp ảnh) $\rightarrow$ <strong>photographer</strong> (n: nhiếp ảnh gia)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             TAB 3: BÀI TẬP TRẮC NGHIỆM (PRACTICE QUIZ - 60 QUESTIONS)
+             ========================================== -->
+        <section id="screen-tab3" class="hidden space-y-6 scaled-content">
+            <!-- Top Level Selector & Dashboard -->
+            <div class="bg-white rounded-3xl p-5 md:p-6 shadow-lg border-4 border-indigo-200 space-y-5">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
+                    <!-- Level Tabs: 30 Basic vs 30 Advanced -->
+                    <div class="flex flex-wrap items-center gap-3 w-full lg:w-auto justify-center">
+                        <button onclick="switchQuizLevel('basic')" id="btnLevelBasic" class="flex-1 sm:flex-initial px-6 py-3.5 rounded-2xl font-extrabold text-xl transition-all flex items-center justify-center gap-2.5 shadow-md">
+                            <i class="fa-solid fa-seedling"></i>
+                            <span>30 Câu Cơ Bản</span>
+                            <span id="badgeProgressBasic" class="bg-white/25 px-2.5 py-0.5 rounded-full text-base">0/30</span>
+                        </button>
+                        <button onclick="switchQuizLevel('advanced')" id="btnLevelAdvanced" class="flex-1 sm:flex-initial px-6 py-3.5 rounded-2xl font-extrabold text-xl transition-all flex items-center justify-center gap-2.5 shadow-md">
+                            <i class="fa-solid fa-fire-flame-curved"></i>
+                            <span>30 Câu Nâng Cao</span>
+                            <span id="badgeProgressAdvanced" class="bg-white/25 px-2.5 py-0.5 rounded-full text-base">0/30</span>
+                        </button>
+                    </div>
+
+                    <!-- Score & Controls -->
+                    <div class="flex flex-wrap items-center justify-center gap-3">
+                        <div class="bg-emerald-50 border-2 border-emerald-300 px-4 py-2 rounded-2xl flex items-center gap-2 font-extrabold text-emerald-900 text-lg">
+                            <i class="fa-solid fa-bullseye text-emerald-600"></i>
+                            <span>Điểm cấp độ:</span>
+                            <span id="levelScoreDisplay" class="text-emerald-700 text-2xl">0</span>
+                            <span class="text-sm text-emerald-600">/ 300</span>
+                        </div>
+
+                        <button onclick="toggleQuestionMap()" class="bg-indigo-100 hover:bg-indigo-200 text-indigo-800 border-2 border-indigo-300 font-extrabold px-4 py-2.5 rounded-2xl text-lg transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-table-cells"></i>
+                            <span>Bảng câu hỏi</span>
+                        </button>
+
+                        <button onclick="confirmResetLevel()" class="bg-rose-100 hover:bg-rose-200 text-rose-800 border-2 border-rose-300 font-extrabold px-4 py-2.5 rounded-2xl text-lg transition-all flex items-center gap-2" title="Làm lại cấp độ này">
+                            <i class="fa-solid fa-rotate-right"></i>
+                            <span>Làm lại</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Collapsible Question Grid Map -->
+                <div id="questionMapPanel" class="hidden pt-4 border-t-2 border-slate-100 space-y-3">
+                    <div class="flex flex-wrap items-center justify-between gap-2 text-base font-bold text-slate-600">
+                        <span>Chọn số thứ tự câu để di chuyển nhanh:</span>
+                        <div class="flex flex-wrap items-center gap-4 text-sm">
+                            <span class="flex items-center gap-1.5"><span class="w-4 h-4 rounded bg-emerald-500 inline-block"></span> Đúng ngay (+10đ)</span>
+                            <span class="flex items-center gap-1.5"><span class="w-4 h-4 rounded bg-amber-500 inline-block"></span> Đúng sau khi làm lại (0đ)</span>
+                            <span class="flex items-center gap-1.5"><span class="w-4 h-4 rounded bg-rose-500 inline-block"></span> Đang chọn sai</span>
+                            <span class="flex items-center gap-1.5"><span class="w-4 h-4 rounded bg-slate-200 inline-block"></span> Chưa làm</span>
+                        </div>
+                    </div>
+                    <div id="questionGridButtons" class="grid grid-cols-6 sm:grid-cols-10 md:grid-cols-15 gap-2">
+                        <!-- Dynamically generated 1..30 buttons -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Card Area -->
+            <div class="bg-white rounded-3xl p-6 md:p-9 shadow-xl border-4 border-indigo-300 space-y-6 relative">
+                <!-- Question Meta Bar -->
+                <div class="flex flex-wrap items-center justify-between gap-3 border-b-2 border-slate-100 pb-4">
+                    <div class="flex items-center gap-3">
+                        <span id="qLevelBadge" class="px-4 py-1.5 rounded-full font-extrabold text-base md:text-lg uppercase tracking-wide">
+                            CƠ BẢN
+                        </span>
+                        <span id="qNumberText" class="text-2xl md:text-3xl font-extrabold text-indigo-950">
+                            Question 1 / 30
+                        </span>
+                    </div>
+
+                    <!-- Smart Translation Button (Default Hidden) & Status Badge -->
+                    <div class="flex flex-wrap items-center gap-3">
+                        <span id="qScoringStatusBadge" class="px-4 py-1.5 rounded-full font-bold text-base bg-slate-100 text-slate-700 border border-slate-300">
+                            <i class="fa-solid fa-bolt text-amber-500 mr-1"></i> Đúng lần đầu: +10 điểm
+                        </span>
+
+                        <button onclick="toggleTranslation()" id="btnSmartTranslate" class="px-4 py-2 rounded-2xl font-extrabold text-base md:text-lg border-2 transition-all flex items-center gap-2 bg-violet-50 hover:bg-violet-100 text-violet-800 border-violet-300 shadow-sm">
+                            <i class="fa-solid fa-language text-xl"></i>
+                            <span id="translateBtnText">Dịch thông minh</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- English Question Prompt -->
+                <div class="space-y-3 py-2">
+                    <p id="questionTextEn" class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-relaxed">
+                        Loading question...
+                    </p>
+
+                    <!-- Smart Translation Box (Hidden by default) -->
+                    <div id="translationBox" class="hidden bg-violet-50 border-l-8 border-violet-500 rounded-2xl p-4 text-violet-950 font-semibold text-xl md:text-2xl transition-all">
+                        <div class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-wand-magic-sparkles text-violet-600 mt-1"></i>
+                            <div>
+                                <span class="font-extrabold text-violet-800">Tạm dịch câu hỏi: </span>
+                                <span id="questionTextVi"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 Gamified Options A, B, C, D -->
+                <div id="optionsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
+                    <!-- Option A (Sapphire Blue) -->
+                    <button onclick="selectAnswer(0)" id="optBtn-0" class="opt-btn opt-a rounded-3xl p-4 md:p-5 text-left flex items-center gap-4">
+                        <span class="opt-badge badge-a w-12 h-12 md:w-14 md:h-14 rounded-2xl font-extrabold text-2xl md:text-3xl flex items-center justify-center shrink-0">A</span>
+                        <span id="optText-0" class="font-extrabold text-xl md:text-2xl flex-1 leading-snug">Option A</span>
+                        <i id="optIcon-0" class="text-2xl md:text-3xl hidden"></i>
+                    </button>
+
+                    <!-- Option B (Amber Orange) -->
+                    <button onclick="selectAnswer(1)" id="optBtn-1" class="opt-btn opt-b rounded-3xl p-4 md:p-5 text-left flex items-center gap-4">
+                        <span class="opt-badge badge-b w-12 h-12 md:w-14 md:h-14 rounded-2xl font-extrabold text-2xl md:text-3xl flex items-center justify-center shrink-0">B</span>
+                        <span id="optText-1" class="font-extrabold text-xl md:text-2xl flex-1 leading-snug">Option B</span>
+                        <i id="optIcon-1" class="text-2xl md:text-3xl hidden"></i>
+                    </button>
+
+                    <!-- Option C (Emerald Green) -->
+                    <button onclick="selectAnswer(2)" id="optBtn-2" class="opt-btn opt-c rounded-3xl p-4 md:p-5 text-left flex items-center gap-4">
+                        <span class="opt-badge badge-c w-12 h-12 md:w-14 md:h-14 rounded-2xl font-extrabold text-2xl md:text-3xl flex items-center justify-center shrink-0">C</span>
+                        <span id="optText-2" class="font-extrabold text-xl md:text-2xl flex-1 leading-snug">Option C</span>
+                        <i id="optIcon-2" class="text-2xl md:text-3xl hidden"></i>
+                    </button>
+
+                    <!-- Option D (Amethyst Purple) -->
+                    <button onclick="selectAnswer(3)" id="optBtn-3" class="opt-btn opt-d rounded-3xl p-4 md:p-5 text-left flex items-center gap-4">
+                        <span class="opt-badge badge-d w-12 h-12 md:w-14 md:h-14 rounded-2xl font-extrabold text-2xl md:text-3xl flex items-center justify-center shrink-0">D</span>
+                        <span id="optText-3" class="font-extrabold text-xl md:text-2xl flex-1 leading-snug">Option D</span>
+                        <i id="optIcon-3" class="text-2xl md:text-3xl hidden"></i>
+                    </button>
+                </div>
+
+                <!-- Instant Feedback & Detailed Vietnamese Explanation Box -->
+                <div id="feedbackContainer" class="hidden pt-4">
+                    <div id="feedbackCard" class="rounded-3xl p-5 md:p-6 border-4 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <div id="feedbackTitle" class="text-2xl md:text-3xl font-extrabold flex items-center gap-2.5">
+                                <!-- Populated via JS -->
+                            </div>
+                            <span id="feedbackPointsBadge" class="px-4 py-1 rounded-full font-extrabold text-lg"></span>
+                        </div>
+                        <div class="bg-white/90 rounded-2xl p-4 md:p-5 border border-slate-200 text-slate-800 space-y-2">
+                            <div class="font-extrabold text-indigo-900 text-xl md:text-2xl flex items-center gap-2">
+                                <i class="fa-solid fa-graduation-cap text-indigo-600"></i>
+                                <span>Giải thích chi tiết:</span>
+                            </div>
+                            <p id="feedbackExplanationText" class="text-xl md:text-2xl font-semibold leading-relaxed text-slate-700"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Navigation Bar (Prev / Next) -->
+                <div class="pt-4 border-t-2 border-slate-100 flex items-center justify-between gap-4">
+                    <button onclick="navigateQuestion(-1)" id="btnPrevQ" class="px-5 py-3 rounded-2xl bg-slate-200 hover:bg-slate-300 disabled:opacity-40 text-slate-800 font-extrabold text-xl transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        <span>Câu trước</span>
+                    </button>
+
+                    <div class="text-center hidden sm:block text-base font-bold text-slate-500">
+                        Đúng lần 1: <span class="text-emerald-600">+10 điểm</span> • Sai làm lại: <span class="text-rose-600">0 điểm</span>
+                    </div>
+
+                    <button onclick="navigateQuestion(1)" id="btnNextQ" class="px-6 py-3 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 disabled:opacity-40 text-white font-extrabold text-xl shadow-md transition-all flex items-center gap-2">
+                        <span>Câu tiếp theo</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Custom Confirmation Modal (No alert/confirm) -->
+    <div id="customModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 md:p-8 border-4 border-indigo-300 shadow-2xl text-center space-y-5 animate-pop">
+            <div class="w-16 h-16 rounded-full bg-rose-100 text-rose-600 mx-auto flex items-center justify-center text-3xl">
+                <i class="fa-solid fa-rotate-right"></i>
+            </div>
+            <h3 id="modalTitle" class="text-2xl md:text-3xl font-extrabold text-slate-800">Làm lại cấp độ này?</h3>
+            <p id="modalMessage" class="text-lg md:text-xl text-slate-600 font-medium">
+                Toàn bộ câu trả lời và điểm số của cấp độ hiện tại sẽ được đặt lại về 0 để em luyện tập lại từ đầu.
+            </p>
+            <div class="flex items-center justify-center gap-3 pt-2">
+                <button onclick="closeModal()" class="px-5 py-2.5 rounded-2xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-extrabold text-lg">
+                    Hủy bỏ
+                </button>
+                <button onclick="executeResetLevel()" class="px-6 py-2.5 rounded-2xl bg-rose-600 hover:bg-rose-700 text-white font-extrabold text-lg shadow-md">
+                    Đồng ý làm lại
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* ==========================================================================
+           1. AUDIO ENGINE (WEB AUDIO API SOUND EFFECTS + ENGLISH TTS FOR TAB 1)
+           ========================================================================== */
+        let soundEnabled = true;
+        let audioCtx = null;
+
+        function getAudioContext() {
+            if (!audioCtx) {
+                const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+                if (AudioContextClass) {
+                    audioCtx = new AudioContextClass();
+                }
+            }
+            if (audioCtx && audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+            return audioCtx;
+        }
+
+        function playSoundEffect(type) {
+            if (!soundEnabled) return;
+            try {
+                const ctx = getAudioContext();
+                if (!ctx) return;
+                const now = ctx.currentTime;
+
+                if (type === 'correct') {
+                    // Bright cheerful victory arpeggio
+                    const notes = [523.25, 659.25, 783.99, 1046.50];
+                    notes.forEach((freq, idx) => {
+                        const osc = ctx.createOscillator();
+                        const gain = ctx.createGain();
+                        osc.type = 'triangle';
+                        osc.frequency.setValueAtTime(freq, now + idx * 0.075);
+                        gain.gain.setValueAtTime(0.22, now + idx * 0.075);
+                        gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.075 + 0.28);
+                        osc.connect(gain);
+                        gain.connect(ctx.destination);
+                        osc.start(now + idx * 0.075);
+                        osc.stop(now + idx * 0.075 + 0.29);
+                    });
+                } else if (type === 'wrong') {
+                    // Low buzzer sound
+                    const notes = [220, 174.61];
+                    notes.forEach((freq, idx) => {
+                        const osc = ctx.createOscillator();
+                        const gain = ctx.createGain();
+                        osc.type = 'sawtooth';
+                        osc.frequency.setValueAtTime(freq, now + idx * 0.14);
+                        gain.gain.setValueAtTime(0.18, now + idx * 0.14);
+                        gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.14 + 0.25);
+                        osc.connect(gain);
+                        gain.connect(ctx.destination);
+                        osc.start(now + idx * 0.14);
+                        osc.stop(now + idx * 0.14 + 0.26);
+                    });
+                } else if (type === 'click') {
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(600, now);
+                    gain.gain.setValueAtTime(0.1, now);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.06);
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    osc.start(now);
+                    osc.stop(now + 0.07);
+                }
+            } catch (e) {
+                console.warn('Audio error:', e);
+            }
+        }
+
+        function toggleSound() {
+            soundEnabled = !soundEnabled;
+            const icon = document.getElementById('soundIcon');
+            const btn = document.getElementById('soundToggleBtn');
+            if (soundEnabled) {
+                icon.className = 'fa-solid fa-volume-high';
+                btn.className = 'w-11 h-11 rounded-2xl bg-emerald-100 hover:bg-emerald-200 border-2 border-emerald-400 text-emerald-700 flex items-center justify-center text-lg transition-all shadow-sm';
+                playSoundEffect('click');
+            } else {
+                icon.className = 'fa-solid fa-volume-xmark';
+                btn.className = 'w-11 h-11 rounded-2xl bg-slate-200 hover:bg-slate-300 border-2 border-slate-400 text-slate-600 flex items-center justify-center text-lg transition-all shadow-sm';
+                if ('speechSynthesis' in window) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+        }
+
+        // Universal Cross-Browser English Pronunciation for Tab 1 (Vocabulary Only)
+        let cachedVoices = [];
+        function loadVoices() {
+            if ('speechSynthesis' in window) {
+                cachedVoices = window.speechSynthesis.getVoices();
+            }
+        }
+        if ('speechSynthesis' in window) {
+            loadVoices();
+            window.speechSynthesis.onvoiceschanged = loadVoices;
+        }
+
+        function speakEnglishWord(word, btnEl) {
+            if (btnEl) {
+                btnEl.classList.add('scale-110', 'ring-4', 'ring-sky-300');
+                setTimeout(() => btnEl.classList.remove('scale-110', 'ring-4', 'ring-sky-300'), 600);
+            }
+
+            if ('speechSynthesis' in window) {
+                try {
+                    window.speechSynthesis.cancel();
+                    const utter = new SpeechSynthesisUtterance(word);
+                    utter.lang = 'en-US';
+                    utter.rate = 0.9;
+                    utter.pitch = 1.0;
+
+                    if (!cachedVoices.length) {
+                        cachedVoices = window.speechSynthesis.getVoices();
+                    }
+                    // Prioritize high-quality native English voices
+                    const preferredVoice = cachedVoices.find(v =>
+                        (v.lang === 'en-GB' || v.lang === 'en-US') &&
+                        (v.name.includes('Google') || v.name.includes('Natural') || v.name.includes('Samantha') || v.name.includes('Daniel') || v.name.includes('Microsoft'))
+                    ) || cachedVoices.find(v => v.lang && v.lang.toLowerCase().startsWith('en'));
+
+                    if (preferredVoice) {
+                        utter.voice = preferredVoice;
+                        utter.lang = preferredVoice.lang;
+                    }
+
+                    window.speechSynthesis.speak(utter);
+                    return;
+                } catch (err) {
+                    console.warn('SpeechSynthesis fallback triggered:', err);
+                }
+            }
+
+            // Fallback dictionary audio stream if browser blocks SpeechSynthesis
+            try {
+                const audio = new Audio(`https://translate.googleapis.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(word)}&tl=en&client=tw-ob`);
+                audio.play().catch(() => playSoundEffect('click'));
+            } catch (e) {
+                playSoundEffect('click');
+            }
+        }
+
+        /* ==========================================================================
+           2. TAB 1 DATA: 32 ESSENTIAL VOCABULARY ITEMS (UNIT 4: MUSIC AND ARTS)
+           ========================================================================== */
+        const vocabularyList = [
+            { word: "anthem", ipa: "/ˈænθəm/", type: "n", meaning: "bài quốc ca (national anthem)", category: "music", example: "Tien Quan Ca is the national anthem of Viet Nam." },
+            { word: "art gallery", ipa: "/ɑːt ˈɡæləri/", type: "n.phr", meaning: "phòng trưng bày nghệ thuật", category: "art", example: "We visited the national art gallery last Sunday." },
+            { word: "artist", ipa: "/ˈɑːtɪst/", type: "n", meaning: "họa sĩ, nghệ sĩ", category: "art", example: "Picasso was a world-famous artist." },
+            { word: "artistic", ipa: "/ɑːˈtɪstɪk/", type: "adj", meaning: "có khiếu nghệ thuật, mang tính nghệ thuật", category: "art", example: "She comes from a very artistic family." },
+            { word: "camera", ipa: "/ˈkæmərə/", type: "n", meaning: "máy ảnh", category: "art", example: "He bought a digital camera to take landscape photos." },
+            { word: "character", ipa: "/ˈkærəktə(r)/", type: "n", meaning: "nhân vật (trong kịch, phim, truyện)", category: "art", example: "Cu Teo is a famous character in Vietnamese water puppetry." },
+            { word: "classical music", ipa: "/ˈklæsɪkl ˈmjuːzɪk/", type: "n.phr", meaning: "nhạc cổ điển", category: "music", example: "Listening to classical music helps me relax." },
+            { word: "compose", ipa: "/kəmˈpəʊz/", type: "v", meaning: "soạn nhạc, sáng tác", category: "action", example: "Mozart started to compose music at the age of five." },
+            { word: "composer", ipa: "/kəmˈpəʊzə(r)/", type: "n", meaning: "nhà soạn nhạc", category: "music", example: "Van Cao is one of the greatest composers in Viet Nam." },
+            { word: "concert hall", ipa: "/ˈkɒnsət hɔːl/", type: "n.phr", meaning: "phòng hòa nhạc", category: "music", example: "The orchestra is playing at the city concert hall tonight." },
+            { word: "control", ipa: "/kənˈtrəʊl/", type: "v", meaning: "điều khiển (con rối)", category: "action", example: "Puppeteers use bamboo rods to control the puppets." },
+            { word: "country music", ipa: "/ˈkʌntri ˈmjuːzɪk/", type: "n.phr", meaning: "nhạc đồng quê", category: "music", example: "Country music is very popular in the southern United States." },
+            { word: "exhibition", ipa: "/ˌeksɪˈbɪʃn/", type: "n", meaning: "cuộc triển lãm", category: "art", example: "Our class went to an art exhibition yesterday." },
+            { word: "folk music", ipa: "/ˈfəʊk mjuːzɪk/", type: "n.phr", meaning: "nhạc dân gian, nhạc truyền thống", category: "music", example: "Quan Ho is a traditional type of Vietnamese folk music." },
+            { word: "in person", ipa: "/ɪn ˈpɜːsn/", type: "idiom", meaning: "trực tiếp, ngoài đời thực", category: "action", example: "Seeing the band in person is more exciting than watching them on TV." },
+            { word: "landscape", ipa: "/ˈlændskeɪp/", type: "n", meaning: "phong cảnh, tranh phong cảnh", category: "art", example: "He loves painting peaceful rural landscapes." },
+            { word: "musical instrument", ipa: "/ˈmjuːzɪkl ˈɪnstrəmənt/", type: "n.phr", meaning: "nhạc cụ", category: "music", example: "The dan bau is a traditional Vietnamese musical instrument." },
+            { word: "musician", ipa: "/mjuˈzɪʃn/", type: "n", meaning: "nhạc sĩ, người chơi nhạc", category: "music", example: "The talented musician played both the piano and the violin." },
+            { word: "originate", ipa: "/əˈrɪdʒɪneɪt/", type: "v", meaning: "bắt nguồn, xuất phát từ (+ in/from)", category: "action", example: "Water puppetry originated in the Red River Delta." },
+            { word: "paintbrush", ipa: "/ˈpeɪntbrʌʃ/", type: "n", meaning: "cọ vẽ", category: "art", example: "You need watercolours and a clean paintbrush for this lesson." },
+            { word: "painter", ipa: "/ˈpeɪntə(r)/", type: "n", meaning: "họa sĩ", category: "art", example: "Bui Xuan Phai was a famous Vietnamese painter." },
+            { word: "painting", ipa: "/ˈpeɪntɪŋ/", type: "n", meaning: "bức tranh, nghệ thuật hội họa", category: "art", example: "Mona Lisa is the most famous painting in the Louvre Museum." },
+            { word: "perform", ipa: "/pəˈfɔːm/", type: "v", meaning: "biểu diễn, trình diễn", category: "action", example: "The students will perform a short play at the school festival." },
+            { word: "performance", ipa: "/pəˈfɔːməns/", type: "n", meaning: "màn trình diễn, buổi biểu diễn", category: "music", example: "Everyone clapped loudly after her wonderful performance." },
+            { word: "photographer", ipa: "/fəˈtɒɡrəfə(r)/", type: "n", meaning: "nhiếp ảnh gia", category: "art", example: "The professional photographer took amazing wildlife pictures." },
+            { word: "photography", ipa: "/fəˈtɒɡrəfi/", type: "n", meaning: "nhiếp ảnh, nghệ thuật chụp ảnh", category: "art", example: "My brother is interested in black-and-white photography." },
+            { word: "pleasure", ipa: "/ˈpleʒə(r)/", type: "n", meaning: "niềm vui thích, điều thú vị", category: "action", example: "Listening to soft music brings great pleasure to my grandparents." },
+            { word: "portrait", ipa: "/ˈpɔːtreɪt/", type: "n", meaning: "tranh chân dung, ảnh chân dung", category: "art", example: "The artist drew a realistic portrait of his grandmother." },
+            { word: "prefer", ipa: "/prɪˈfɜː(r)/", type: "v", meaning: "thích hơn (prefer A to B)", category: "action", example: "I prefer playing the guitar to listening to loud rock music." },
+            { word: "puppet", ipa: "/ˈpʌpɪt/", type: "n", meaning: "con rối (water puppetry: múa rối nước)", category: "art", example: "The wooden puppets are painted in bright colours." },
+            { word: "sculpture", ipa: "/ˈskʌlptʃə(r)/", type: "n", meaning: "điêu khắc, tác phẩm điêu khắc", category: "art", example: "There is a marble sculpture in the centre of the museum." },
+            { word: "spare time", ipa: "/ˌspeə ˈtaɪm/", type: "n.phr", meaning: "thời gian rảnh rỗi", category: "action", example: "She often practises the cello in her spare time." }
+        ];
+
+        let currentVocabFilter = 'all';
+
+        function renderVocabulary() {
+            const container = document.getElementById('vocabGridContainer');
+            const searchVal = (document.getElementById('vocabSearchInput')?.value || '').trim().toLowerCase();
+
+            const filtered = vocabularyList.filter(item => {
+                const matchCat = currentVocabFilter === 'all' || item.category === currentVocabFilter;
+                const matchSearch = !searchVal ||
+                    item.word.toLowerCase().includes(searchVal) ||
+                    item.meaning.toLowerCase().includes(searchVal);
+                return matchCat && matchSearch;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full bg-white rounded-3xl p-8 text-center border-2 border-slate-200 text-slate-500 font-bold text-2xl">
+                        Không tìm thấy từ vựng phù hợp. Hãy thử từ khóa khác nhé!
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = filtered.map((item, idx) => `
+                <div class="bg-white rounded-3xl p-5 md:p-6 shadow-md hover:shadow-xl border-3 border-sky-200 hover:border-sky-400 transition-all flex flex-col justify-between gap-3">
+                    <div class="flex items-start justify-between gap-3">
+                        <div class="space-y-1">
+                            <div class="flex flex-wrap items-center gap-2.5">
+                                <h3 class="text-2xl md:text-3xl font-extrabold text-indigo-950">${item.word}</h3>
+                                <span class="px-3 py-0.5 rounded-full text-base font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+                                    (${item.type})
+                                </span>
+                            </div>
+                            <p class="text-lg md:text-xl font-mono font-bold text-sky-700">${item.ipa}</p>
+                        </div>
+
+                        <button onclick="speakEnglishWord('${item.word.replace(/'/g, "\\'")}', this)" class="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-500 to-indigo-600 hover:from-sky-600 hover:to-indigo-700 text-white flex items-center justify-center text-2xl shadow-md transition-all shrink-0" title="Nghe phát âm tiếng Anh">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-sky-50/80 rounded-2xl p-3.5 border border-sky-100 space-y-1.5">
+                        <div class="text-xl md:text-2xl font-extrabold text-emerald-800">
+                            <i class="fa-solid fa-tag text-emerald-500 mr-1.5 text-lg"></i>${item.meaning}
+                        </div>
+                        <div class="text-base md:text-lg text-slate-600 italic font-semibold">
+                            "${item.example}"
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function setVocabFilter(cat) {
+            currentVocabFilter = cat;
+            ['all', 'music', 'art', 'action'].forEach(c => {
+                const btn = document.getElementById('vFilter-' + c);
+                if (c === cat) {
+                    btn.className = 'px-4 py-2 rounded-xl font-bold text-base md:text-lg bg-sky-600 text-white shadow-sm transition-all';
+                } else {
+                    btn.className = 'px-4 py-2 rounded-xl font-bold text-base md:text-lg bg-slate-100 text-slate-700 hover:bg-sky-100 transition-all';
+                }
+            });
+            renderVocabulary();
+        }
+
+        function filterVocabulary() {
+            renderVocabulary();
+        }
+
+        /* ==========================================================================
+           3. TAB 3 DATA: 30 BASIC QUESTIONS & 30 ADVANCED QUESTIONS
+           ========================================================================== */
+        const basicQuestions = [
+            {
+                q: "Classical music is not ______ exciting as rock and roll.",
+                options: ["as", "more", "most", "than"],
+                ans: 0,
+                vi: "Nhạc cổ điển không sôi động bằng nhạc rock and roll.",
+                exp: "Cấu trúc so sánh không bằng: S1 + be + not + as/so + adj + as + S2. Vì phía sau đã có từ 'as' nên vị trí trống cần điền 'as'."
+            },
+            {
+                q: "Mozart and Beethoven are two of the greatest ______ in the world.",
+                options: ["painters", "composers", "photographers", "puppets"],
+                ans: 1,
+                vi: "Mozart và Beethoven là hai trong số những nhà soạn nhạc vĩ đại nhất thế giới.",
+                exp: "'composer' (nhà soạn nhạc) phù hợp với ngữ cảnh nói về hai danh nhân âm nhạc Mozart và Beethoven."
+            },
+            {
+                q: "Water puppetry is quite different ______ traditional theatre.",
+                options: ["as", "with", "from", "to"],
+                ans: 2,
+                vi: "Múa rối nước khá khác biệt so với kịch truyền thống.",
+                exp: "Cụm tính từ cố định: 'different from' (khác với)."
+            },
+            {
+                q: "My sister can play several ______, such as the piano, the violin, and the cello.",
+                options: ["paintbrushes", "musical instruments", "art galleries", "portraits"],
+                ans: 1,
+                vi: "Chị gái tôi có thể chơi một vài nhạc cụ, chẳng hạn như đàn piano, đàn vĩ cầm và đàn cello.",
+                exp: "Piano, violin và cello là các 'musical instruments' (nhạc cụ)."
+            },
+            {
+                q: "This copy of the painting looks just ______ the original one in the museum.",
+                options: ["as", "same", "from", "like"],
+                ans: 3,
+                vi: "Bản sao của bức tranh này trông giống hệt như bản gốc ở trong bảo tàng.",
+                exp: "Cấu trúc 'look like + cụm danh từ' nghĩa là trông giống như cái gì."
+            },
+            {
+                q: "Last weekend, our class visited an ______ to admire modern paintings.",
+                options: ["art gallery", "anthem", "instrument", "composer"],
+                ans: 0,
+                vi: "Cuối tuần trước, lớp chúng tôi đã ghé thăm một phòng trưng bày nghệ thuật để chiêm ngưỡng những bức tranh hiện đại.",
+                exp: "'art gallery' (phòng trưng bày nghệ thuật) là nơi trưng bày các bức tranh."
+            },
+            {
+                q: "Her taste in music is the same ______ her older brother's.",
+                options: ["from", "like", "as", "with"],
+                ans: 2,
+                vi: "Gu âm nhạc của cô ấy giống hệt với của anh trai cô ấy.",
+                exp: "Cấu trúc so sánh tương đồng: 'the same as' (giống như)."
+            },
+            {
+                q: "You need some watercolours and a clean ______ to finish this picture.",
+                options: ["camera", "paintbrush", "puppet", "concert"],
+                ans: 1,
+                vi: "Bạn cần một ít màu nước và một cây cọ vẽ sạch để hoàn thành bức tranh này.",
+                exp: "'paintbrush' (cọ vẽ) đi cùng với 'watercolours' (màu nước) để vẽ tranh."
+            },
+            {
+                q: "The artist spent three weeks drawing a ______ of the old man's face.",
+                options: ["landscape", "concert", "pleasure", "portrait"],
+                ans: 3,
+                vi: "Người họa sĩ đã dành ba tuần để vẽ một bức chân dung khuôn mặt của cụ già.",
+                exp: "'portrait' (tranh chân dung) là bức tranh khắc họa khuôn mặt hoặc con người."
+            },
+            {
+                q: "Seeing a famous band ______ is much more thrilling than watching them on television.",
+                options: ["in person", "in time", "on purpose", "by chance"],
+                ans: 0,
+                vi: "Xem một ban nhạc nổi tiếng trực tiếp ngoài đời thú vị hơn nhiều so với xem họ trên tivi.",
+                exp: "Cụm từ 'in person' mang nghĩa là trực tiếp, ngoài đời thực."
+            },
+            {
+                q: "Tien Quan Ca is the national ______ of Viet Nam.",
+                options: ["exhibition", "sculpture", "anthem", "portrait"],
+                ans: 2,
+                vi: "Tiến Quân Ca là bài quốc ca của Việt Nam.",
+                exp: "'national anthem' là bài quốc ca."
+            },
+            {
+                q: "Folk music is ______ melodic and peaceful as country music.",
+                options: ["more", "as", "same", "like"],
+                ans: 1,
+                vi: "Nhạc dân gian cũng du dương và êm dịu như nhạc đồng quê.",
+                exp: "Cấu trúc so sánh bằng: 'as + adj + as'. Phía sau có 'as' nên phía trước tính từ điền 'as'."
+            },
+            {
+                q: "My grandfather prefers listening to traditional folk music ______ watching pop concerts.",
+                options: ["than", "from", "as", "to"],
+                ans: 3,
+                vi: "Ông tôi thích nghe nhạc dân gian truyền thống hơn là xem các buổi hòa nhạc pop.",
+                exp: "Cấu trúc diễn tả sự thích hơn: 'prefer + V-ing/N + to + V-ing/N'."
+            },
+            {
+                q: "He bought an expensive digital ______ because his hobby is photography.",
+                options: ["camera", "paintbrush", "guitar", "puppet"],
+                ans: 0,
+                vi: "Anh ấy đã mua một chiếc máy ảnh kỹ thuật số đắt tiền vì sở thích của anh ấy là nhiếp ảnh.",
+                exp: "'camera' (máy ảnh) phục vụ cho sở thích 'photography' (nhiếp ảnh)."
+            },
+            {
+                q: "The puppeteers stand behind a bamboo screen and use strings to ______ the wooden puppets.",
+                options: ["compose", "paint", "control", "originate"],
+                ans: 2,
+                vi: "Các nghệ nhân đứng sau bức mành tre và dùng dây để điều khiển những con rối gỗ.",
+                exp: "Động từ 'control' nghĩa là điều khiển (con rối)."
+            },
+            {
+                q: "Is a live concert in a stadium as ______ as a show in a small theatre?",
+                options: ["excitingly", "more exciting", "most exciting", "exciting"],
+                ans: 3,
+                vi: "Một buổi hòa nhạc trực tiếp ở sân vận động có sôi động như một buổi diễn trong nhà hát nhỏ không?",
+                exp: "Sau động từ 'to be' (Is) và kẹp giữa 'as ... as' ta dùng tính từ nguyên mẫu 'exciting'."
+            },
+            {
+                q: "The symphony orchestra will give a special ______ at the Opera House tonight.",
+                options: ["performance", "photographer", "paintbrush", "sculpture"],
+                ans: 0,
+                vi: "Dàn nhạc giao hưởng sẽ có một buổi biểu diễn đặc biệt tại Nhà hát Lớn tối nay.",
+                exp: "Cụm từ 'give a performance' nghĩa là tổ chức/thực hiện một buổi biểu diễn."
+            },
+            {
+                q: "A modern electric guitar does not sound ______ an acoustic guitar.",
+                options: ["same", "like", "as", "from"],
+                ans: 1,
+                vi: "Đàn ghi-ta điện hiện đại nghe không giống như đàn ghi-ta thùng.",
+                exp: "Cấu trúc 'sound like + cụm danh từ' nghĩa là nghe giống như cái gì."
+            },
+            {
+                q: "Van Cao was a talented Vietnamese ______ who wrote many famous songs.",
+                options: ["sculptor", "photographer", "composer", "puppeteer"],
+                ans: 2,
+                vi: "Văn Cao là một nhà soạn nhạc tài ba của Việt Nam, người đã viết nhiều ca khúc nổi tiếng.",
+                exp: "Người viết nhiều ca khúc nổi tiếng ('wrote many famous songs') là 'composer' (nhà soạn nhạc)."
+            },
+            {
+                q: "We saw many ancient stone statues and marble ______ at the national museum.",
+                options: ["anthems", "concerts", "melodies", "sculptures"],
+                ans: 3,
+                vi: "Chúng tôi đã thấy nhiều bức tượng đá cổ và các tác phẩm điêu khắc bằng đá cẩm thạch tại bảo tàng quốc gia.",
+                exp: "'sculptures' (các tác phẩm điêu khắc) phù hợp với chất liệu 'marble' (đá cẩm thạch) trong bảo tàng."
+            },
+            {
+                q: "Taking photos of nature is not ______ difficult as painting a realistic portrait.",
+                options: ["so", "more", "same", "like"],
+                ans: 0,
+                vi: "Chụp ảnh thiên nhiên không khó bằng vẽ một bức chân dung tả thực.",
+                exp: "Trong câu phủ định của so sánh bằng, ta dùng 'not as/so + adj + as'. Đáp án đúng là 'so'."
+            },
+            {
+                q: "In Viet Nam, Music and Arts are ______ subjects at secondary school.",
+                options: ["compulsory", "musical", "wooden", "empty"],
+                ans: 0,
+                vi: "Ở Việt Nam, Âm nhạc và Mỹ thuật là các môn học bắt buộc ở bậc trung học cơ sở.",
+                exp: "Tính từ 'compulsory' nghĩa là bắt buộc (môn học bắt buộc trong chương trình)."
+            },
+            {
+                q: "What do you often do in your ______ time to relax after school?",
+                options: ["heavy", "spare", "narrow", "loud"],
+                ans: 1,
+                vi: "Bạn thường làm gì vào thời gian rảnh rỗi để thư giãn sau giờ học?",
+                exp: "Cụm từ cố định: 'in one's spare time' = 'in one's free time' (vào thời gian rảnh rỗi)."
+            },
+            {
+                q: "The stage design for tonight's concert is completely ______ from last year's show.",
+                options: ["same", "like", "different", "similar"],
+                ans: 2,
+                vi: "Thiết kế sân khấu cho buổi hòa nhạc tối nay hoàn toàn khác với chương trình năm ngoái.",
+                exp: "Phía sau có giới từ 'from' nên ta chọn tính từ 'different' (different from: khác với)."
+            },
+            {
+                q: "My cousin loves ______; he goes to the countryside every Sunday to take pictures of rivers and mountains.",
+                options: ["puppetry", "sculpture", "orchestra", "photography"],
+                ans: 3,
+                vi: "Anh họ tôi yêu thích nhiếp ảnh; anh ấy về vùng quê mỗi Chủ nhật để chụp ảnh sông núi.",
+                exp: "Hoạt động 'take pictures' (chụp ảnh) tương ứng với danh từ 'photography' (nhiếp ảnh)."
+            },
+            {
+                q: "That oil painting of the countryside is as ______ as a dream.",
+                options: ["peacefully", "more peaceful", "peaceful", "most peaceful"],
+                ans: 2,
+                vi: "Bức tranh sơn dầu vẽ vùng quê đó thanh bình như một giấc mơ.",
+                exp: "Sau động từ 'to be' (is) và nằm giữa 'as ... as' cần một tính từ nguyên mẫu: 'peaceful'."
+            },
+            {
+                q: "Water puppetry ______ in the villages of the Red River Delta in the 11th century.",
+                options: ["composed", "originated", "controlled", "photographed"],
+                ans: 1,
+                vi: "Múa rối nước bắt nguồn từ các ngôi làng vùng đồng bằng sông Hồng vào thế kỷ 11.",
+                exp: "'originate in + địa điểm/thời gian' nghĩa là bắt nguồn, xuất phát từ đâu."
+            },
+            {
+                q: "How many ______ are there in the school art exhibition this month?",
+                options: ["paintings", "composers", "anthems", "lyrics"],
+                ans: 0,
+                vi: "Có bao nhiêu bức tranh trong cuộc triển lãm mỹ thuật của trường vào tháng này?",
+                exp: "Trong 'art exhibition' (triển lãm mỹ thuật) trưng bày các 'paintings' (bức tranh)."
+            },
+            {
+                q: "Lan sings folk songs ______ beautifully as a professional singer.",
+                options: ["like", "same", "more", "as"],
+                ans: 3,
+                vi: "Lan hát dân ca hay như một ca sĩ chuyên nghiệp.",
+                exp: "Cấu trúc so sánh bằng với trạng từ: 'S + V + as + adv + as + N'."
+            },
+            {
+                q: "The young ______ practised the violin for four hours every day before the competition.",
+                options: ["painter", "photographer", "musician", "sculptor"],
+                ans: 2,
+                vi: "Người nhạc sĩ trẻ đã luyện tập đàn vĩ cầm bốn tiếng mỗi ngày trước cuộc thi.",
+                exp: "Người chơi đàn violin là 'musician' (nhạc sĩ / người chơi nhạc)."
+            }
+        ];
+
+        const advancedQuestions = [
+            {
+                q: "Oil paintings have a rich texture that is completely different ______ watercolours.",
+                options: ["with", "than", "from", "as"],
+                ans: 2,
+                vi: "Tranh sơn dầu có kết cấu đậm nét hoàn toàn khác biệt với tranh màu nước.",
+                exp: "Cấu trúc chuẩn học thuật: 'different from' (khác biệt với). Trạng từ 'completely' đứng trước để nhấn mạnh mức độ."
+            },
+            {
+                q: "Although the two violinists trained at the same academy, Nam does not play ______ his twin brother.",
+                options: ["as skillfully as", "so skillful as", "as skillful as", "more skillfully as"],
+                ans: 0,
+                vi: "Mặc dù hai nghệ sĩ vĩ cầm được đào tạo tại cùng một học viện, Nam không chơi điêu luyện bằng người anh em sinh đôi của mình.",
+                exp: "Bổ nghĩa cho động từ thường 'play' trong cấu trúc 'not as ... as' ta phải dùng trạng từ nguyên mẫu 'skillfully' -> 'as skillfully as'."
+            },
+            {
+                q: "The ticket for the symphony concert is ______ the ticket for the art exhibition; both cost ten dollars.",
+                options: ["as expensive than", "different from", "the same price as", "more expensive as"],
+                ans: 2,
+                vi: "Vé xem hòa nhạc giao hưởng có cùng mức giá với vé xem triển lãm nghệ thuật; cả hai đều có giá 10 đô la.",
+                exp: "Hai vé đều có giá 10 đô la -> cùng giá tiền: 'the same price as' (= as expensive as)."
+            },
+            {
+                q: "To become a successful ______, you need not only a good camera but also a creative eye for light.",
+                options: ["photograph", "photography", "photographer", "photographic"],
+                ans: 2,
+                vi: "Để trở thành một nhiếp ảnh gia thành công, bạn không chỉ cần một chiếc máy ảnh tốt mà còn cần đôi mắt sáng tạo về ánh sáng.",
+                exp: "Sau cụm 'a successful ...' chỉ nghề nghiệp của con người, ta cần danh từ chỉ người: 'photographer' (nhiếp ảnh gia)."
+            },
+            {
+                q: "Every student in the drama club was amazed by Minh's ______ in the school play last night.",
+                options: ["perform", "performance", "performer", "performed"],
+                ans: 1,
+                vi: "Mọi học sinh trong câu lạc bộ kịch đều kinh ngạc trước màn trình diễn của Minh trong vở kịch của trường tối qua.",
+                exp: "Sau sở hữu cách 'Minh's' cần một danh từ chỉ sự việc: 'performance' (màn trình diễn)."
+            },
+            {
+                q: "Traditional Quan Ho singing is not ______ modern pop music among teenagers, yet it holds great cultural value.",
+                options: ["as popular as", "the same popular as", "popular like", "different as"],
+                ans: 0,
+                vi: "Hát Quan họ truyền thống không phổ biến bằng nhạc pop hiện đại trong giới trẻ, nhưng nó mang giá trị văn hóa to lớn.",
+                exp: "So sánh không bằng với tính từ 'popular' sau động từ 'to be': 'not as popular as'."
+            },
+            {
+                q: "Instead of drawing a person's face, Elena decided to paint a peaceful ______ of the golden rice fields at sunset.",
+                options: ["portrait", "anthem", "landscape", "sculpture"],
+                ans: 2,
+                vi: "Thay vì vẽ khuôn mặt người, Elena quyết định vẽ một bức tranh phong cảnh yên bình của cánh đồng lúa chín vàng lúc hoàng hôn.",
+                exp: "Đối lập với 'portrait' (tranh chân dung vẽ khuôn mặt) là 'landscape' (tranh phong cảnh vẽ cánh đồng lúa lúc hoàng hôn)."
+            },
+            {
+                q: "My younger sister is very ______; she can turn recycled paper and old bottles into lovely decorations.",
+                options: ["art", "artist", "artistically", "artistic"],
+                ans: 3,
+                vi: "Em gái tôi rất có khiếu nghệ thuật; em ấy có thể biến giấy tái chế và chai lọ cũ thành những đồ trang trí xinh xắn.",
+                exp: "Sau 'is very' cần một tính từ bổ nghĩa cho chủ ngữ chỉ người: 'artistic' (có năng khiếu nghệ thuật)."
+            },
+            {
+                q: "This wooden statue is ______ that bronze one; both are exactly fifty centimetres tall.",
+                options: ["as height as", "the same height as", "the same tall as", "different height from"],
+                ans: 1,
+                vi: "Bức tượng gỗ này có cùng chiều cao với bức tượng đồng kia; cả hai đều cao đúng 50 cm.",
+                exp: "Giữa 'the same ... as' phải dùng Danh từ. Danh từ của 'tall/high' là 'height' -> 'the same height as'."
+            },
+            {
+                q: "Listening to Beethoven's Ninth Symphony in a grand concert hall sounds ______ listening to it through small earphones.",
+                options: ["totally different from", "total different from", "totally same as", "as different as"],
+                ans: 0,
+                vi: "Nghe Bản giao hưởng số 9 của Beethoven trong phòng hòa nhạc lớn nghe hoàn toàn khác biệt so với nghe qua tai nghe nhỏ.",
+                exp: "Sau linking verb 'sounds' cần tính từ 'different' đi với giới từ 'from', và trước tính từ dùng trạng từ 'totally' để bổ nghĩa -> 'totally different from'."
+            },
+            {
+                q: "Would you rather ______ a musical instrument on stage than sing in front of a large audience?",
+                options: ["playing", "to play", "played", "play"],
+                ans: 3,
+                vi: "Bạn thích chơi một nhạc cụ trên sân khấu hơn là hát trước một lượng khán giả lớn phải không?",
+                exp: "Cấu trúc 'Would rather + V(nguyên thể) + than + V(nguyên thể)'. Do đó ta chọn 'play'."
+            },
+            {
+                q: "The melody of this folk song sounds ______ a gentle lullaby that my grandmother used to sing.",
+                options: ["as", "same", "like", "from"],
+                ans: 2,
+                vi: "Giai điệu của bài dân ca này nghe giống như một bài hát ru dịu dàng mà bà tôi từng hát.",
+                exp: "Trước cụm danh từ 'a gentle lullaby', sau động từ 'sounds' ta dùng giới từ 'like' (nghe giống như)."
+            },
+            {
+                q: "Trinh Cong Son ______ more than six hundred songs during his lifetime, many of which are still loved today.",
+                options: ["controlled", "composed", "originated", "exhibited"],
+                ans: 1,
+                vi: "Trịnh Công Sơn đã sáng tác hơn sáu trăm ca khúc trong suốt cuộc đời mình, nhiều bài trong số đó vẫn được yêu thích cho đến ngày nay.",
+                exp: "'compose songs' nghĩa là sáng tác các bài hát."
+            },
+            {
+                q: "In a water puppet show, the ______ stand waist-deep in the water behind a screen to move the puppets.",
+                options: ["photographers", "composers", "sculptors", "puppeteers"],
+                ans: 3,
+                vi: "Trong một buổi biểu diễn múa rối nước, các nghệ nhân múa rối đứng ngập đến thắt lưng trong nước phía sau bức mành để điều khiển con rối.",
+                exp: "'puppeteers' là các nghệ nhân điều khiển con rối (người biểu diễn múa rối)."
+            },
+            {
+                q: "No other painting in the room is ______ the large oil portrait near the entrance.",
+                options: ["as impressive as", "more impressive as", "the same impressive as", "impressive like"],
+                ans: 0,
+                vi: "Không có bức tranh nào khác trong phòng ấn tượng bằng bức chân dung sơn dầu lớn gần lối vào.",
+                exp: "Cấu trúc so sánh bằng ở dạng phủ định: 'No other + N + be + as/so + adj + as...'."
+            },
+            {
+                q: "The length of the first act in the opera is ______ the second act; each lasts forty-five minutes.",
+                options: ["different from", "not as long as", "as long than", "the same as"],
+                ans: 3,
+                vi: "Thời lượng của màn thứ nhất trong vở nhạc kịch giống hệt với màn thứ hai; mỗi màn kéo dài 45 phút.",
+                exp: "Chủ ngữ đã là 'The length' (Độ dài/Thời lượng) và mỗi màn đều kéo dài 45 phút nên ta dùng 'the same as'."
+            },
+            {
+                q: "Playing ______ cello requires great patience because it is a challenging stringed instrument.",
+                options: ["a", "an", "the", "no article"],
+                ans: 2,
+                vi: "Chơi đàn cello đòi hỏi sự kiên nhẫn lớn vì đó là một nhạc cụ dây đầy thử thách.",
+                exp: "Khi nói về việc chơi một loại nhạc cụ (play + the + musical instrument), ta luôn dùng mạo từ xác định 'the'."
+            },
+            {
+                q: "Many art critics say that her latest sculpture is not ______ her earlier works.",
+                options: ["so creative as", "as creatively as", "the same creative as", "creative than"],
+                ans: 0,
+                vi: "Nhiều nhà phê bình nghệ thuật nhận định rằng tác phẩm điêu khắc mới nhất của cô ấy không sáng tạo bằng những tác phẩm trước đó.",
+                exp: "Sau động từ 'to be' (is not) cần tính từ 'creative' trong cấu trúc 'not so/as + adj + as'."
+            },
+            {
+                q: "Our school's charity concert raised ______ money as the art fair held last autumn.",
+                options: ["the same", "as much", "as many", "different"],
+                ans: 1,
+                vi: "Buổi hòa nhạc từ thiện của trường chúng tôi đã quyên góp được nhiều tiền ngang bằng với hội chợ nghệ thuật tổ chức vào mùa thu năm ngoái.",
+                exp: "'money' là danh từ không đếm được và phía sau có 'as', nên trong so sánh bằng ta dùng 'as much + N(không đếm được) + as'."
+            },
+            {
+                q: "Dong Ho paintings are made on traditional 'do' paper with natural colours, which makes them ______ other types of folk art.",
+                options: ["the same from", "as unique as", "distinctly different from", "similar as"],
+                ans: 2,
+                vi: "Tranh Đông Hồ được làm trên giấy dó truyền thống với màu sắc tự nhiên, điều này làm cho chúng khác biệt rõ rệt với các loại hình nghệ thuật dân gian khác.",
+                exp: "Cấu trúc 'make + O + (adv) + adj + prep': 'distinctly different from' (khác biệt rõ rệt so với)."
+            },
+            {
+                q: "David prefers visiting quiet museums and art galleries ______ going to noisy rock festivals.",
+                options: ["than", "to", "from", "as"],
+                ans: 1,
+                vi: "David thích ghé thăm những bảo tàng và phòng trưng bày nghệ thuật yên tĩnh hơn là đi đến những lễ hội nhạc rock ồn ào.",
+                exp: "Cấu trúc 'prefer + V-ing + to + V-ing' (thích làm gì hơn làm gì)."
+            },
+            {
+                q: "The acoustic guitar is ______ the electric guitar in the way it produces sound without an amplifier.",
+                options: ["not the same as", "not as same as", "different with", "not like as"],
+                ans: 0,
+                vi: "Đàn ghi-ta thùng không giống với đàn ghi-ta điện ở cách nó tạo ra âm thanh mà không cần bộ khuếch đại.",
+                exp: "Cấu trúc phủ định của 'the same as' là 'not the same as' (= different from)."
+            },
+            {
+                q: "All the costumes in tonight's traditional dance show were designed by a well-known local ______.",
+                options: ["art", "artistic", "artist", "artistically"],
+                ans: 2,
+                vi: "Tất cả trang phục trong buổi biểu diễn múa truyền thống tối nay đều được thiết kế bởi một nghệ sĩ địa phương nổi tiếng.",
+                exp: "Sau 'by a well-known local ...' cần một danh từ chỉ người thực hiện việc thiết kế: 'artist' (nghệ sĩ/họa sĩ)."
+            },
+            {
+                q: "A photograph captures a real moment instantly, whereas a ______ takes hours or even days of brushwork.",
+                options: ["camera", "painting", "composer", "concert"],
+                ans: 1,
+                vi: "Một bức ảnh ghi lại khoảnh khắc thực tế ngay lập tức, trong khi một bức tranh vẽ đòi hỏi hàng giờ hoặc thậm chí hàng ngày đưa cọ.",
+                exp: "So sánh sự tương phản giữa 'photograph' (bức ảnh chụp) và 'painting' (bức tranh vẽ bằng cọ)."
+            },
+            {
+                q: "She danced ______ a graceful swan across the stage during the ballet performance.",
+                options: ["as", "same", "from", "like"],
+                ans: 3,
+                vi: "Cô ấy múa uyển chuyển giống như một con thiên nga duyên dáng lướt qua sân khấu trong buổi biểu diễn ba-lê.",
+                exp: "Trước cụm danh từ 'a graceful swan' ta dùng giới từ 'like' (giống như)."
+            },
+            {
+                q: "Does this traditional bamboo flute produce ______ sound as the Western silver flute?",
+                options: ["the same", "as clear", "different", "like"],
+                ans: 0,
+                vi: "Chiếc sáo trúc truyền thống này có tạo ra âm thanh giống như chiếc sáo bạc phương Tây không?",
+                exp: "Trước danh từ đếm được số ít 'sound' và đi kèm với 'as' phía sau, ta dùng 'the same' (the same + N + as)."
+            },
+            {
+                q: "Sharing the ______ of music with friends makes our school life much more meaningful.",
+                options: ["pleasant", "pleasantly", "pleasure", "please"],
+                ans: 2,
+                vi: "Chia sẻ niềm vui âm nhạc với bạn bè khiến cuộc sống học đường của chúng ta trở nên ý nghĩa hơn rất nhiều.",
+                exp: "Sau mạo từ 'the' và trước giới từ 'of' cần một danh từ: 'pleasure' (niềm vui thích)."
+            },
+            {
+                q: "There are ______ visitors at the national art gallery on weekdays as there are on Sundays.",
+                options: ["not as much", "not as many", "not the same", "different from"],
+                ans: 1,
+                vi: "Không có nhiều khách tham quan tại phòng trưng bày nghệ thuật quốc gia vào các ngày trong tuần như vào các ngày Chủ nhật.",
+                exp: "'visitors' là danh từ đếm được số nhiều, nên cấu trúc so sánh bằng phủ định dùng 'not as many + N(số nhiều) + as'."
+            },
+            {
+                q: "Jazz music ______ in New Orleans in the late 19th and early 20th centuries.",
+                options: ["performed", "controlled", "originated", "composed"],
+                ans: 2,
+                vi: "Nhạc Jazz bắt nguồn ở New Orleans vào cuối thế kỷ 19 và đầu thế kỷ 20.",
+                exp: "'originate in + địa điểm/thời gian' mang nghĩa là bắt nguồn, ra đời tại đâu."
+            },
+            {
+                q: "Which sentence has the EXACT same meaning as: 'Pop music is different from folk music'?",
+                options: [
+                    "Pop music is as old as folk music.",
+                    "Pop music is the same as folk music.",
+                    "Pop music sounds like folk music.",
+                    "Pop music is not the same as folk music."
+                ],
+                ans: 3,
+                vi: "Câu nào có nghĩa tương đương hoàn toàn với câu: 'Nhạc pop khác với nhạc dân gian'?",
+                exp: "Quy tắc biến đổi câu tương đương: 'A is different from B' <=> 'A is not the same as B' (Nhạc pop không giống với nhạc dân gian)."
+            }
+        ];
+
+        /* ==========================================================================
+           4. QUIZ STATE MANAGEMENT & SCORING LOGIC
+           ========================================================================== */
+        let currentScreen = 'start';
+        let currentLevel = 'basic'; // 'basic' | 'advanced'
+        let currentIndex = { basic: 0, advanced: 0 };
+        let showSmartTranslation = false;
+
+        // State per question:
+        // status: 'unanswered' | 'wrong_in_progress' | 'completed_perfect' | 'completed_retry'
+        // failedOnce: boolean (if true, getting it right later yields 0 points)
+        // wrongPickedIndices: array of option indices clicked wrongly
+        const quizState = {
+            basic: basicQuestions.map(() => ({
+                status: 'unanswered',
+                failedOnce: false,
+                wrongPickedIndices: [],
+                pointsEarned: 0
+            })),
+            advanced: advancedQuestions.map(() => ({
+                status: 'unanswered',
+                failedOnce: false,
+                wrongPickedIndices: [],
+                pointsEarned: 0
+            }))
+        };
+
+        function getActiveQuestions() {
+            return currentLevel === 'basic' ? basicQuestions : advancedQuestions;
+        }
+
+        function getActiveStateList() {
+            return currentLevel === 'basic' ? quizState.basic : quizState.advanced;
+        }
+
+        function calculateTotalScore() {
+            const basicSum = quizState.basic.reduce((acc, s) => acc + s.pointsEarned, 0);
+            const advSum = quizState.advanced.reduce((acc, s) => acc + s.pointsEarned, 0);
+            return {
+                basic: basicSum,
+                advanced: advSum,
+                total: basicSum + advSum
+            };
+        }
+
+        function updateScoreHeaders() {
+            const scores = calculateTotalScore();
+            document.getElementById('headerTotalScore').textContent = scores.total;
+            document.getElementById('levelScoreDisplay').textContent = currentLevel === 'basic' ? scores.basic : scores.advanced;
+
+            const basicDone = quizState.basic.filter(s => s.status === 'completed_perfect' || s.status === 'completed_retry').length;
+            const advDone = quizState.advanced.filter(s => s.status === 'completed_perfect' || s.status === 'completed_retry').length;
+
+            document.getElementById('badgeProgressBasic').textContent = `${basicDone}/30`;
+            document.getElementById('badgeProgressAdvanced').textContent = `${advDone}/30`;
+        }
+
+        /* ==========================================================================
+           5. RENDER QUIZ QUESTION & INTERACTIVE FEEDBACK
+           ========================================================================== */
+        function renderCurrentQuestion() {
+            const questions = getActiveQuestions();
+            const states = getActiveStateList();
+            const idx = currentIndex[currentLevel];
+            const qObj = questions[idx];
+            const qState = states[idx];
+
+            // Update Level Switcher Buttons styling
+            const btnBasic = document.getElementById('btnLevelBasic');
+            const btnAdv = document.getElementById('btnLevelAdvanced');
+            if (currentLevel === 'basic') {
+                btnBasic.className = 'flex-1 sm:flex-initial px-6 py-3.5 rounded-2xl font-extrabold text-xl transition-all flex items-center justify-center gap-2.5 shadow-lg bg-gradient-to-r from-sky-500 to-blue-600 text-white ring-4 ring-sky-200';
+                btnAdv.className = 'flex-1 sm:flex-initial px-6 py-3.5 rounded-2xl font-extrabold text-xl transition-all flex items-center justify-center gap-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700';
+                document.getElementById('qLevelBadge').className = 'px-4 py-1.5 rounded-full font-extrabold text-base md:text-lg uppercase tracking-wide bg-sky-100 text-sky-800 border-2 border-sky-300';
+                document.getElementById('qLevelBadge').innerHTML = '<i class="fa-solid fa-seedling mr-1"></i> CƠ BẢN';
+            } else {
+                btnAdv.className = 'flex-1 sm:flex-initial px-6 py-3.5 rounded-2xl font-extrabold text-xl transition-all flex items-center justify-center gap-2.5 shadow-lg bg-gradient-to-r from-amber-500 to-rose-600 text-white ring-4 ring-amber-200';
+                btnBasic.className = 'flex-1 sm:flex-initial px-6 py-3.5 rounded-2xl font-extrabold text-xl transition-all flex items-center justify-center gap-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700';
+                document.getElementById('qLevelBadge').className = 'px-4 py-1.5 rounded-full font-extrabold text-base md:text-lg uppercase tracking-wide bg-rose-100 text-rose-800 border-2 border-rose-300';
+                document.getElementById('qLevelBadge').innerHTML = '<i class="fa-solid fa-fire-flame-curved mr-1"></i> NÂNG CAO';
+            }
+
+            // Question Number & Prompt
+            document.getElementById('qNumberText').textContent = `Question ${idx + 1} / ${questions.length}`;
+            document.getElementById('questionTextEn').textContent = qObj.q;
+            document.getElementById('questionTextVi').textContent = qObj.vi;
+
+            // Smart Translation visibility (Default hidden on new question unless toggled)
+            const transBox = document.getElementById('translationBox');
+            const transBtnText = document.getElementById('translateBtnText');
+            if (showSmartTranslation) {
+                transBox.classList.remove('hidden');
+                transBtnText.textContent = 'Ẩn bản dịch';
+            } else {
+                transBox.classList.add('hidden');
+                transBtnText.textContent = 'Dịch thông minh';
+            }
+
+            // Scoring Status Pill
+            const statusBadge = document.getElementById('qScoringStatusBadge');
+            if (qState.status === 'completed_perfect') {
+                statusBadge.className = 'px-4 py-1.5 rounded-full font-extrabold text-base bg-emerald-100 text-emerald-800 border-2 border-emerald-400';
+                statusBadge.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> Đã trả lời đúng (+10 điểm)';
+            } else if (qState.status === 'completed_retry') {
+                statusBadge.className = 'px-4 py-1.5 rounded-full font-extrabold text-base bg-amber-100 text-amber-900 border-2 border-amber-400';
+                statusBadge.innerHTML = '<i class="fa-solid fa-rotate-right text-amber-600 mr-1"></i> Hoàn thành sau khi làm lại (0 điểm)';
+            } else if (qState.failedOnce) {
+                statusBadge.className = 'px-4 py-1.5 rounded-full font-extrabold text-base bg-rose-100 text-rose-800 border-2 border-rose-400 animate-pulse';
+                statusBadge.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-rose-600 mr-1"></i> Đã chọn sai — Hãy chọn lại (0 điểm)';
+            } else {
+                statusBadge.className = 'px-4 py-1.5 rounded-full font-bold text-base bg-slate-100 text-slate-700 border border-slate-300';
+                statusBadge.innerHTML = '<i class="fa-solid fa-bolt text-amber-500 mr-1"></i> Đúng lần đầu: +10 điểm';
+            }
+
+            // Render 4 Options with distinct Gamification Themes
+            const baseOptionClasses = ['opt-a', 'opt-b', 'opt-c', 'opt-d'];
+            const isCompleted = qState.status === 'completed_perfect' || qState.status === 'completed_retry';
+
+            for (let i = 0; i < 4; i++) {
+                const btn = document.getElementById(`optBtn-${i}`);
+                const txt = document.getElementById(`optText-${i}`);
+                const icon = document.getElementById(`optIcon-${i}`);
+
+                txt.textContent = qObj.options[i];
+                btn.className = `opt-btn ${baseOptionClasses[i]} rounded-3xl p-4 md:p-5 text-left flex items-center gap-4`;
+                icon.className = 'text-2xl md:text-3xl hidden';
+                btn.disabled = false;
+
+                // Apply wrong state if already clicked wrongly
+                if (qState.wrongPickedIndices.includes(i)) {
+                    btn.classList.add('opt-wrong');
+                    icon.className = 'fa-solid fa-circle-xmark text-2xl md:text-3xl text-white shrink-0';
+                    btn.disabled = true;
+                }
+
+                // Apply correct state if completed
+                if (isCompleted) {
+                    btn.disabled = true;
+                    if (i === qObj.ans) {
+                        btn.classList.add('opt-correct', 'animate-pop');
+                        icon.className = 'fa-solid fa-circle-check text-2xl md:text-3xl text-white shrink-0';
+                    }
+                }
+            }
+
+            // Feedback & Explanation Box
+            const fbContainer = document.getElementById('feedbackContainer');
+            const fbCard = document.getElementById('feedbackCard');
+            const fbTitle = document.getElementById('feedbackTitle');
+            const fbPoints = document.getElementById('feedbackPointsBadge');
+            const fbExp = document.getElementById('feedbackExplanationText');
+
+            if (isCompleted) {
+                fbContainer.classList.remove('hidden');
+                fbExp.textContent = qObj.exp;
+                if (qState.status === 'completed_perfect') {
+                    fbCard.className = 'rounded-3xl p-5 md:p-6 border-4 border-emerald-400 bg-emerald-50/90 space-y-3 animate-pop';
+                    fbTitle.className = 'text-2xl md:text-3xl font-extrabold text-emerald-800 flex items-center gap-2.5';
+                    fbTitle.innerHTML = '<i class="fa-solid fa-trophy text-amber-500"></i><span>Chính xác tuyệt đối! Xuất sắc!</span>';
+                    fbPoints.className = 'px-4 py-1 rounded-full font-extrabold text-lg bg-emerald-600 text-white shadow';
+                    fbPoints.textContent = '+10 ĐIỂM';
+                } else {
+                    fbCard.className = 'rounded-3xl p-5 md:p-6 border-4 border-amber-400 bg-amber-50/90 space-y-3 animate-pop';
+                    fbTitle.className = 'text-2xl md:text-3xl font-extrabold text-amber-900 flex items-center gap-2.5';
+                    fbTitle.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600"></i><span>Chính xác! Em đã tìm ra đáp án đúng!</span>';
+                    fbPoints.className = 'px-4 py-1 rounded-full font-extrabold text-lg bg-amber-500 text-white shadow';
+                    fbPoints.textContent = '+0 ĐIỂM (Làm lại)';
+                }
+            } else if (qState.status === 'wrong_in_progress') {
+                fbContainer.classList.remove('hidden');
+                fbCard.className = 'rounded-3xl p-5 md:p-6 border-4 border-rose-400 bg-rose-50/90 space-y-3';
+                fbTitle.className = 'text-2xl md:text-3xl font-extrabold text-rose-800 flex items-center gap-2.5';
+                fbTitle.innerHTML = '<i class="fa-solid fa-circle-exclamation text-rose-600"></i><span>Chưa chính xác! Hãy chọn lại đáp án khác nhé!</span>';
+                fbPoints.className = 'px-4 py-1 rounded-full font-extrabold text-lg bg-rose-600 text-white shadow';
+                fbPoints.textContent = '0 ĐIỂM';
+                fbExp.textContent = `Gợi ý kiến thức: ${qObj.exp}`;
+            } else {
+                fbContainer.classList.add('hidden');
+            }
+
+            // Prev / Next buttons
+            document.getElementById('btnPrevQ').disabled = idx === 0;
+            document.getElementById('btnNextQ').disabled = idx === questions.length - 1;
+
+            updateScoreHeaders();
+            renderQuestionMapGrid();
+        }
+
+        function selectAnswer(optionIndex) {
+            const questions = getActiveQuestions();
+            const states = getActiveStateList();
+            const idx = currentIndex[currentLevel];
+            const qObj = questions[idx];
+            const qState = states[idx];
+
+            if (qState.status === 'completed_perfect' || qState.status === 'completed_retry') {
+                return;
+            }
+
+            if (optionIndex === qObj.ans) {
+                // Correct Answer Selected
+                playSoundEffect('correct');
+                if (!qState.failedOnce) {
+                    qState.status = 'completed_perfect';
+                    qState.pointsEarned = 10;
+                } else {
+                    qState.status = 'completed_retry';
+                    qState.pointsEarned = 0;
+                }
+            } else {
+                // Wrong Answer Selected -> Mark failedOnce = true, 0 points, allow immediate retry
+                playSoundEffect('wrong');
+                qState.failedOnce = true;
+                qState.pointsEarned = 0;
+                qState.status = 'wrong_in_progress';
+                if (!qState.wrongPickedIndices.includes(optionIndex)) {
+                    qState.wrongPickedIndices.push(optionIndex);
+                }
+            }
+
+            renderCurrentQuestion();
+        }
+
+        function navigateQuestion(delta) {
+            playSoundEffect('click');
+            const questions = getActiveQuestions();
+            const nextIdx = currentIndex[currentLevel] + delta;
+            if (nextIdx >= 0 && nextIdx < questions.length) {
+                currentIndex[currentLevel] = nextIdx;
+                showSmartTranslation = false; // Default hidden on each question
+                renderCurrentQuestion();
+            }
+        }
+
+        function jumpToQuestion(idx) {
+            playSoundEffect('click');
+            currentIndex[currentLevel] = idx;
+            showSmartTranslation = false;
+            renderCurrentQuestion();
+        }
+
+        function switchQuizLevel(level) {
+            playSoundEffect('click');
+            currentLevel = level;
+            showSmartTranslation = false;
+            renderCurrentQuestion();
+        }
+
+        function toggleTranslation() {
+            playSoundEffect('click');
+            showSmartTranslation = !showSmartTranslation;
+            const transBox = document.getElementById('translationBox');
+            const transBtnText = document.getElementById('translateBtnText');
+            if (showSmartTranslation) {
+                transBox.classList.remove('hidden');
+                transBtnText.textContent = 'Ẩn bản dịch';
+            } else {
+                transBox.classList.add('hidden');
+                transBtnText.textContent = 'Dịch thông minh';
+            }
+        }
+
+        function toggleQuestionMap() {
+            playSoundEffect('click');
+            const panel = document.getElementById('questionMapPanel');
+            panel.classList.toggle('hidden');
+        }
+
+        function renderQuestionMapGrid() {
+            const container = document.getElementById('questionGridButtons');
+            const states = getActiveStateList();
+            const activeIdx = currentIndex[currentLevel];
+
+            container.innerHTML = states.map((st, i) => {
+                let colorClass = 'bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-300';
+                if (st.status === 'completed_perfect') {
+                    colorClass = 'bg-emerald-500 hover:bg-emerald-600 text-white border-emerald-700';
+                } else if (st.status === 'completed_retry') {
+                    colorClass = 'bg-amber-500 hover:bg-amber-600 text-white border-amber-700';
+                } else if (st.status === 'wrong_in_progress') {
+                    colorClass = 'bg-rose-500 hover:bg-rose-600 text-white border-rose-700';
+                }
+
+                const ringClass = i === activeIdx ? 'ring-4 ring-indigo-500 scale-105' : '';
+                return `
+                    <button onclick="jumpToQuestion(${i})" class="h-11 rounded-xl font-extrabold text-lg border-2 transition-all ${colorClass} ${ringClass}">
+                        ${i + 1}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        /* ==========================================================================
+           6. SCREEN NAVIGATION, MODAL & FULLSCREEN
+           ========================================================================== */
+        function switchScreen(screenId) {
+            playSoundEffect('click');
+            currentScreen = screenId;
+
+            ['start', 'tab1', 'tab2', 'tab3'].forEach(id => {
+                const el = document.getElementById('screen-' + id);
+                if (id === screenId) {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+
+            // Toggle top tab switcher visibility
+            const topSwitcher = document.getElementById('topTabSwitcher');
+            if (screenId === 'start') {
+                topSwitcher.classList.add('hidden');
+                topSwitcher.classList.remove('lg:flex');
+            } else {
+                topSwitcher.classList.remove('hidden');
+                topSwitcher.classList.add('lg:flex');
+            }
+
+            // Highlight active tab in header
+            ['tab1', 'tab2', 'tab3'].forEach(t => {
+                const btn = document.getElementById('navBtn' + t.charAt(0).toUpperCase() + t.slice(1));
+                if (!btn) return;
+                if (t === screenId) {
+                    btn.className = 'px-3.5 py-1.5 rounded-xl font-extrabold text-base transition-all flex items-center gap-1.5 bg-indigo-600 text-white shadow-sm';
+                } else {
+                    btn.className = 'px-3.5 py-1.5 rounded-xl font-bold text-base transition-all flex items-center gap-1.5 text-slate-600 hover:bg-slate-200';
+                }
+            });
+
+            if (screenId === 'tab1') {
+                renderVocabulary();
+            } else if (screenId === 'tab3') {
+                renderCurrentQuestion();
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function confirmResetLevel() {
+            playSoundEffect('click');
+            const levelName = currentLevel === 'basic' ? '30 Câu Cơ Bản' : '30 Câu Nâng Cao';
+            document.getElementById('modalTitle').textContent = `Làm lại ${levelName}?`;
+            document.getElementById('customModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            playSoundEffect('click');
+            document.getElementById('customModal').classList.add('hidden');
+        }
+
+        function executeResetLevel() {
+            playSoundEffect('click');
+            const targetList = currentLevel === 'basic' ? quizState.basic : quizState.advanced;
+            targetList.forEach(item => {
+                item.status = 'unanswered';
+                item.failedOnce = false;
+                item.wrongPickedIndices = [];
+                item.pointsEarned = 0;
+            });
+            currentIndex[currentLevel] = 0;
+            showSmartTranslation = false;
+            closeModal();
+            renderCurrentQuestion();
+        }
+
+        function toggleFullscreen() {
+            playSoundEffect('click');
+            const doc = window.document;
+            const docEl = doc.documentElement;
+
+            const requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+            const cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+            if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+                if (requestFullScreen) {
+                    requestFullScreen.call(docEl).catch(() => {});
+                }
+            } else {
+                if (cancelFullScreen) {
+                    cancelFullScreen.call(doc).catch(() => {});
+                }
+            }
+        }
+
+        document.addEventListener('fullscreenchange', () => {
+            const icon = document.getElementById('fullscreenIcon');
+            if (document.fullscreenElement) {
+                icon.className = 'fa-solid fa-compress';
+            } else {
+                icon.className = 'fa-solid fa-expand';
+            }
+        });
+
+        // Initialize App on Load
+        window.onload = function () {
+            renderVocabulary();
+            renderCurrentQuestion();
+        };
+    </script>
+</body>
+</html>
